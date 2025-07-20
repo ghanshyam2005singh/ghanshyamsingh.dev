@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Database, Cloud, Zap, Shield, Globe } from "lucide-react";
+import {  Database, Cloud, Zap, Shield, Globe } from "lucide-react";
 
 const skills = [
   {
@@ -59,13 +59,14 @@ const skills = [
   },
 ];
 
+
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.97 },
-  visible: (i: number) => ({
+  visible: (i: number = 0) => ({
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { delay: i * 0.13, type: "spring", stiffness: 120 }
+    transition: { delay: i * 0.13, type: "spring", stiffness: 120 } as const
   }),
 };
 

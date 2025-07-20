@@ -27,7 +27,7 @@ const About: React.FC = () => {
             <div className="absolute inset-0 bg-zinc-200 dark:bg-zinc-800 animate-pulse" />
           )}
           <Image
-            src="/assets/team/cmo-2.jpg"
+            src="/assets/cmo-2.jpg"
             alt="Ghanshyam Singh"
             fill
             className={`object-cover transition-opacity duration-700 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
@@ -61,7 +61,7 @@ const About: React.FC = () => {
 
         {/* Quote */}
         <blockquote className="italic text-zinc-700 dark:text-zinc-300 mt-2 text-base sm:text-lg font-semibold">
-          "I don’t just build apps—I create ecosystems that empower people."
+          &quot;I don’t just build apps—I create ecosystems that empower people.&quot;
         </blockquote>
       </motion.div>
     </section>

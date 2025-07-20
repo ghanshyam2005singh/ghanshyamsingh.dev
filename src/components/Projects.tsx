@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import type { Transition } from "framer-motion";
 
 type Project = {
   name: string;
@@ -54,7 +55,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { delay: i * 0.13, type: "spring", stiffness: 120 }
+    transition: { delay: i * 0.13, type: "spring" as Transition["type"], stiffness: 120 }
   }),
 };
 

@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #fff;
+  color: #18181b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: #18181b;
+  color: #f3f4f6;
+}
+
+/* Selection color */
+::selection {
+  background: #a78bfa;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 4s ease-in-out infinite;
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+}
+.animate-wiggle {
+  display: inline-block;
+  animation: wiggle 1.2s infinite;
+}
+
+/* Remove glows for a cleaner look */
+.drop-shadow-glow {
+  filter: none !important;
+}
+
+/* Modern glassmorphism card utility */
+.glass-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(200,200,200,0.14);
+  box-shadow: 0 2px 16px 0 rgba(30,41,59,0.06);
+  transition: box-shadow 0.2s;
+}
+.dark .glass-card {
+  background: rgba(24,24,27,0.7);
+  border: 1px solid rgba(63,63,70,0.14);
+}
+
+/* Soft radial background for hero/about/sections */
+.soft-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, #a78bfa18 0%, #fff0 100%);
+}
+.dark .soft-bg {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, #a78bfa22 0%, #18181b 100%);
+}
+
+/* Responsive tweaks for cards/sections */
+@media (max-width: 640px) {
+  .glass-card {
+    border-radius: 1rem;
+    padding: 1.25rem;
+  }
+}

@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState } from "react";
+import Loader from "../components/Loader";
 import Header from "../components/Header";
 import About from "../components/About";
 import Skills from "../components/Skills";
@@ -7,12 +8,17 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Head from "next/head";
 
-const Home: React.FC = () => (
-  <>
-    <Head>
-      <title>Ghanshyam Singh - Portfolio</title>
-      <meta
-        name="description"
+const Home: React.FC = () => {
+  const [loading, setLoading] = useState(true);
+  return (
+    <>
+      {loading && <Loader onFinish={() => setLoading(false)} />}
+      {!loading && (
+        <>
+          <Head>
+            <title>Ghanshyam Singh - Portfolio</title>
+            <meta
+              name="description"
         content="Welcome to my portfolio website. Explore my projects, skills, and contact information."
       />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -25,7 +31,10 @@ const Home: React.FC = () => (
       <Contact />
     </main>
     <Footer />
-  </>
-);
+        </>
+      )}
+    </>
+  );
+};
 
 export default Home;

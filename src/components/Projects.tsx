@@ -14,37 +14,100 @@ const projects: Project[] = [
   {
     name: "AlumConnect",
     url: "https://alumconn.in",
-    description: "Secure alumni-student networking platform",
-    stack: "Next.js, TypeScript, Prisma, PostgreSQL",
+    description: "Secure alumni-student networking platform.",
+    stack: "Next.js, TypeScript, Prisma, PostgreSQL, Tailwind CSS",
     status: "🟢 Live",
   },
   {
     name: "Padh-le-Bhai",
     url: "https://padh-le-bhai-one.vercel.app/",
-    description: "Student notes & assignment sharing platform",
-    stack: "Next.js, Firebase",
-    status: "🟢 Live",
-  },
-  {
-    name: "Dr. Serena Blake",
-    url: "https://dr-serena-blake-phi.vercel.app/",
-    description: "Therapist website with accessibility focus",
-    stack: "Next.js, TypeScript",
+    description: "Student notes & assignment sharing platform.",
+    stack: "Next.js, Google Cloud Services, Firebase, Supabase, Tailwind CSS",
     status: "🟢 Live",
   },
   {
     name: "CV-Slayer",
     url: "https://github.com/ghanshyam2005singh/CV-Slayer",
-    description: "AI-powered resume reviewer",
-    stack: "React, Node.js, Gemini API",
-    status: "🟡 In Progress",
+    description: "AI-powered resume reviewer.",
+    stack: "React, Node.js, Express.js, MongoDB, LLM",
+    status: "✅ Completed",
   },
   {
     name: "Homie-Finder",
     url: "https://github.com/ghanshyam2005singh/Homie-Finder",
-    description: "Smart roommate matching for students",
+    description: "Smart roommate matching for students.",
     stack: "Next.js, Firebase, Supabase",
-    status: "🟣 Coming Soon",
+    status: "✅ Completed",
+  },
+  {
+    name: "Zombie Survival Shooter Game",
+    url: "https://github.com/ghanshyam2005singh/Zombie-Survival-Shooter",
+    description: "Top-down shooter: player vs zombies, score tracking, health system, Firebase integration.",
+    stack: "Phaser 3, Firebase, JavaScript, Vercel",
+    status: "🟡 In Progress",
+  },
+  {
+    name: "Task Manager",
+    url: "https://github.com/ghanshyam2005singh/Task-Manager",
+    description: "Full-stack MERN To-Do app with auth, CRUD, modern UI, and security best practices.",
+    stack: "MongoDB, Express.js, React, Node.js, JWT, Material-UI",
+    status: "✅ Completed",
+  },
+  {
+    name: "Dr. Serena Blake",
+    url: "https://github.com/ghanshyam2005singh/Dr.-Serena-Blake",
+    description: "Therapist website with accessibility focus.",
+    stack: "Next.js, TypeScript",
+    status: "✅ Completed",
+  },
+  {
+    name: "CrediVault",
+    url: "https://github.com/ghanshyam2005singh/CrediVault",
+    description: "Decentralized borrowing dApp: lock WBTC, borrow USDT, track LTV, repay, withdraw.",
+    stack: "Next.js 15, Tailwind, Wagmi, Ethers.js, Solidity, Hardhat",
+    status: "🟡 In Progress",
+  },
+  {
+    name: "Go Booking App",
+    url: "https://github.com/ghanshyam2005singh/Golang-Learning-Project",
+    description: "Ticket booking app to learn Go: covers basics to concurrency, file I/O, and testing.",
+    stack: "Go (Golang)",
+    status: "✅ Completed",
+  },
+  {
+    name: "DataMind AI",
+    url: "https://github.com/ghanshyam2005singh/DataMind-AI",
+    description: "AI-powered data management agent: organize, retrieve, process, and analyze data.",
+    stack: "AI, Cloud, Node.js",
+    status: "✅ Completed",
+  },
+  {
+    name: "URL Shortener",
+    url: "https://github.com/ghanshyam2005singh/url-shortner",
+    description: "Shorten long URLs, generate unique codes, simple Flask web UI.",
+    stack: "Flask, MongoDB",
+    status: "✅ Completed",
+  },
+  {
+    name: "Blogging-App",
+    url: "https://github.com/ghanshyam2005singh/Blogging-App",
+    description: "Create account, write blogs, comment, read. Modern blogging platform.",
+    stack: "Node.js, Express.js, MongoDB, EJS, JavaScript",
+    status: "✅ Completed",
+  },
+  {
+    name: "Discord Bot",
+    url: "https://github.com/ghanshyam2005singh/Discord-Bot",
+    description: "Custom Discord bot using Node.js.",
+    stack: "Node.js, Discord.js",
+    status: "✅ Completed",
+  },
+  {
+    name: "Currency Converter",
+    url: "https://github.com/ghanshyam2005singh/Currency-Converter-using-API",
+    description: "Currency converter using public API.",
+    stack: "JavaScript, API",
+    status: "✅ Completed",
   },
 ];
 
@@ -54,7 +117,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { delay: i * 0.13, type: "spring" as const, stiffness: 120 }
+    transition: { delay: i * 0.09, type: "spring" as const, stiffness: 120 }
   }),
 };
 
@@ -73,7 +136,7 @@ const Projects: React.FC = () => (
     >
       Projects
     </motion.h2>
-    <div className="grid gap-8 md:grid-cols-2 relative max-w-5xl mx-auto py-20 px-4">
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 relative max-w-6xl mx-auto py-20 px-4">
       {projects.map((project, i) => (
         <motion.a
           key={project.name}
@@ -88,11 +151,11 @@ const Projects: React.FC = () => (
           className="group glass-card block rounded-xl border border-[#6366f1] shadow-2xl hover:shadow-lg transition-all p-6 relative overflow-hidden"
         >
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-lg font-semibold text-[#312e81] dark:text-[#a78bfa] group-hover:underline flex items-center gap-2 font-mono">
+            <span className="text-sm font-mono">{project.status}</span>
+            <h3 className="text-lg font-semibold text-[#312e81] dark:text-[#a78bfa] group-hover:underline flex items-center gap-2 font-mono ml-2">
               {project.name}
               <ExternalLink className="w-4 h-4 opacity-60 group-hover:opacity-100 transition" />
             </h3>
-            <span className="text-sm font-mono">{project.status}</span>
           </div>
           <p className="text-[#312e81] dark:text-[#a78bfa] mb-2 font-mono">{project.description}</p>
           <div className="text-xs text-[#6366f1] dark:text-[#a78bfa] font-mono">{project.stack}</div>

@@ -6,10 +6,13 @@ export default function Document() {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#7c3aed" />
-        <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Ghanshyam Singh – Full Stack Developer Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+        {/* Optional: Preconnect for Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
-      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-mono">
         <Main />
         <NextScript />
       </body>

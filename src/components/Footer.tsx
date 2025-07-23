@@ -1,9 +1,9 @@
 import React from "react";
 
 const Footer: React.FC = () => (
-  <footer className="w-full py-6 mt-12 border-t border-zinc-200 dark:border-zinc-700 bg-white dark:bg-gray-900">
+  <footer className="w-full py-6 mt-12 border-t border-[#6366f1] bg-gradient-to-r from-[#0f172a] via-[#312e81] to-[#7c3aed]">
     <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 gap-2">
-      <span className="text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="text-sm text-[#a5b4fc] font-mono">
         © {new Date().getFullYear()} Ghanshyam Singh. All rights reserved.
       </span>
       <div className="flex gap-4">
@@ -12,7 +12,7 @@ const Footer: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          className="hover:underline text-zinc-700 dark:text-zinc-200 hover:text-primary"
+          className="font-mono text-[#a5b4fc] hover:text-white transition-colors underline underline-offset-4"
         >
           GitHub
         </a>
@@ -21,7 +21,7 @@ const Footer: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          className="hover:underline text-zinc-700 dark:text-zinc-200 hover:text-primary"
+          className="font-mono text-[#a5b4fc] hover:text-white transition-colors underline underline-offset-4"
         >
           LinkedIn
         </a>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Startup"
-          className="hover:underline text-zinc-700 dark:text-zinc-200 hover:text-primary"
+          className="font-mono text-[#a5b4fc] hover:text-white transition-colors underline underline-offset-4"
         >
           Startup
         </a>

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import type { Transition } from "framer-motion";
 
 type Project = {
   name: string;
@@ -55,14 +54,14 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { delay: i * 0.13, type: "spring" as Transition["type"], stiffness: 120 }
+    transition: { delay: i * 0.13, type: "spring" as const, stiffness: 120 }
   }),
 };
 
 const Projects: React.FC = () => (
   <section
     id="projects"
-    className="relative max-w-5xl mx-auto py-20 px-4"
+    className="relative w-full mx-auto py-16 px-4 flex flex-col items-center gap-8 bg-gradient-to-br from-[#0f172a] via-[#312e81] to-[#7c3aed]"
   >
     <div className="soft-bg"></div>
     <motion.h2
@@ -70,11 +69,11 @@ const Projects: React.FC = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, type: "spring" }}
-      className="text-3xl sm:text-4xl font-extrabold mb-10 text-center text-zinc-900 dark:text-zinc-100"
+      className="text-3xl sm:text-4xl font-extrabold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a78bfa] font-mono tracking-tight"
     >
       Projects
     </motion.h2>
-    <div className="grid gap-8 md:grid-cols-2">
+    <div className="grid gap-8 md:grid-cols-2 relative max-w-5xl mx-auto py-20 px-4">
       {projects.map((project, i) => (
         <motion.a
           key={project.name}
@@ -86,17 +85,17 @@ const Projects: React.FC = () => (
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={cardVariants}
-          className="group glass-card block rounded-xl border border-zinc-200 dark:border-zinc-700 shadow hover:shadow-lg transition-all p-6 relative overflow-hidden"
+          className="group glass-card block rounded-xl border border-[#6366f1] shadow-2xl hover:shadow-lg transition-all p-6 relative overflow-hidden"
         >
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 group-hover:underline flex items-center gap-2">
+            <h3 className="text-lg font-semibold text-[#312e81] dark:text-[#a78bfa] group-hover:underline flex items-center gap-2 font-mono">
               {project.name}
               <ExternalLink className="w-4 h-4 opacity-60 group-hover:opacity-100 transition" />
             </h3>
             <span className="text-sm font-mono">{project.status}</span>
           </div>
-          <p className="text-zinc-600 dark:text-zinc-300 mb-2">{project.description}</p>
-          <div className="text-xs text-zinc-400 dark:text-zinc-400 font-mono">{project.stack}</div>
+          <p className="text-[#312e81] dark:text-[#a78bfa] mb-2 font-mono">{project.description}</p>
+          <div className="text-xs text-[#6366f1] dark:text-[#a78bfa] font-mono">{project.stack}</div>
         </motion.a>
       ))}
     </div>

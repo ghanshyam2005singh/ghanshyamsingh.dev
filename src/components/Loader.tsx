@@ -21,31 +21,31 @@ const Loader: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
         i++;
         if (i > scriptLines[current].length) {
           clearInterval(typeInterval);
-          setTimeout(() => setCurrent(current + 1), 600);
+          setTimeout(() => setCurrent(current + 1), 400); // much faster
         }
-      }, 22);
+      }, 20); // much faster typing
       return () => clearInterval(typeInterval);
     } else {
-      setTimeout(onFinish, 700);
+      setTimeout(onFinish, 400); // quick transition to site
     }
   }, [current, onFinish]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
-      <div className="p-8 rounded-lg border border-gray-800 bg-gray-900 shadow-lg w-full max-w-md font-mono text-green-400 text-lg">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#312e81] to-[#7c3aed]">
+      <div className="p-8 rounded-2xl border border-[#6366f1] bg-white/90 dark:bg-[#18181b]/90 shadow-2xl w-full max-w-md font-mono text-[#312e81] dark:text-[#a78bfa] text-lg font-semibold tracking-wide backdrop-blur-md">
         {Array.from({ length: current }).map((_, idx) => (
           <div key={idx} className="mb-1">{scriptLines[idx]}</div>
         ))}
         {current < scriptLines.length && (
           <div>
             {typed}
-            <span className="animate-blink">|</span>
+            <span className="animate-blink text-[#6366f1]">|</span>
           </div>
         )}
       </div>
       <style>{`
         .animate-blink {
-          animation: blink 1s steps(2, start) infinite;
+          animation: blink 0.8s steps(2, start) infinite;
         }
         @keyframes blink {
           to { opacity: 0; }

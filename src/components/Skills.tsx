@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {  Database, Cloud, Zap, Shield, Globe } from "lucide-react";
+import { Database, Cloud, Zap, Shield, Globe } from "lucide-react";
 
 const skills = [
   {
@@ -59,30 +59,29 @@ const skills = [
   },
 ];
 
-
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.97 },
   visible: (i: number = 0) => ({
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { delay: i * 0.13, type: "spring", stiffness: 120 } as const
+    transition: { delay: i * 0.13, type: "spring" as const, stiffness: 120 }
   }),
 };
 
 const Skills: React.FC = () => (
-  <section id="skills" className="relative max-w-5xl mx-auto py-20 px-4">
+  <section id="skills" className="relative w-full mx-auto py-16 px-4 flex flex-col items-center gap-8 bg-gradient-to-br from-[#0f172a] via-[#312e81] to-[#7c3aed]">
     <div className="soft-bg"></div>
     <motion.h2
       initial={{ opacity: 0, y: -30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, type: "spring" }}
-      className="text-3xl sm:text-4xl font-extrabold mb-10 text-center text-zinc-900 dark:text-zinc-100"
+      className="text-3xl sm:text-4xl font-extrabold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a78bfa] font-mono tracking-tight"
     >
       Skills
     </motion.h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative max-w-5xl mx-auto py-20 px-4">
       {skills.map((skill, i) => (
         <motion.div
           key={skill.title}
@@ -91,11 +90,11 @@ const Skills: React.FC = () => (
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={cardVariants}
-          className="glass-card border border-zinc-200 dark:border-zinc-700 rounded-xl p-7 shadow hover:shadow-lg transition-all flex flex-col items-start group relative overflow-hidden"
+          className="glass-card border border-[#6366f1] rounded-xl p-7 shadow-2xl hover:shadow-lg transition-all flex flex-col items-start group relative overflow-hidden"
         >
           <div className="mb-4">{skill.icon}</div>
-          <h3 className="text-xl font-semibold mb-2 text-zinc-900 dark:text-zinc-100">{skill.title}</h3>
-          <ul className="list-disc list-inside text-zinc-700 dark:text-zinc-300 text-sm space-y-1">
+          <h3 className="text-xl font-semibold mb-2 text-[#312e81] dark:text-[#a78bfa] font-mono">{skill.title}</h3>
+          <ul className="list-disc list-inside text-[#6366f1] dark:text-[#a78bfa] text-sm space-y-1 font-mono">
             {skill.items.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}

@@ -12,7 +12,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    name: "AlumConnect",
+    name: "Alumconn",
     url: "https://alumconn.in",
     description: "Secure alumni-student networking platform.",
     stack: "Next.js, TypeScript, Prisma, PostgreSQL, Tailwind CSS",
@@ -124,19 +124,19 @@ const cardVariants = {
 const Projects: React.FC = () => (
   <section
     id="projects"
-    className="relative w-full mx-auto py-16 px-4 flex flex-col items-center gap-8 bg-gradient-to-br from-[#0f172a] via-[#312e81] to-[#7c3aed]"
+    className="w-full mx-auto py-16 px-4 flex flex-col items-center gap-8"
   >
-    <div className="soft-bg"></div>
     <motion.h2
       initial={{ opacity: 0, y: -30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, type: "spring" }}
-      className="text-3xl sm:text-4xl font-extrabold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a78bfa] font-mono tracking-tight"
+      className="text-3xl sm:text-4xl font-extrabold mb-10 text-center font-mono tracking-tight text-[#18181b]"
+      style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
     >
       Projects
     </motion.h2>
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 relative max-w-6xl mx-auto py-20 px-4">
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 relative max-w-6xl mx-auto">
       {projects.map((project, i) => (
         <motion.a
           key={project.name}
@@ -148,17 +148,17 @@ const Projects: React.FC = () => (
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={cardVariants}
-          className="group glass-card block rounded-xl border border-[#6366f1] shadow-2xl hover:shadow-lg transition-all p-6 relative overflow-hidden"
+          className="group block transition-all relative overflow-visible rounded-xl border border-[#e5e7eb] bg-white/80 hover:bg-white/100 shadow-md hover:shadow-lg p-6"
         >
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-mono">{project.status}</span>
-            <h3 className="text-lg font-semibold text-[#312e81] dark:text-[#a78bfa] group-hover:underline flex items-center gap-2 font-mono ml-2">
+            <span className="text-sm font-mono text-[#6366f1]">{project.status}</span>
+            <h3 className="text-lg font-semibold text-[#18181b] group-hover:underline flex items-center gap-2 font-mono ml-2">
               {project.name}
               <ExternalLink className="w-4 h-4 opacity-60 group-hover:opacity-100 transition" />
             </h3>
           </div>
-          <p className="text-[#312e81] dark:text-[#a78bfa] mb-2 font-mono">{project.description}</p>
-          <div className="text-xs text-[#6366f1] dark:text-[#a78bfa] font-mono">{project.stack}</div>
+          <p className="text-[#312e81] mb-2 font-mono">{project.description}</p>
+          <div className="text-xs text-[#6366f1] font-mono">{project.stack}</div>
         </motion.a>
       ))}
     </div>

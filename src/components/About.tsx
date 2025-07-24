@@ -116,7 +116,7 @@ const About: React.FC = () => {
       className="w-full flex flex-col md:grid md:grid-cols-12 items-center justify-center min-h-[70vh] py-12 px-4 sm:px-8 md:gap-6 gap-8"
     >
       {/* About Text */}
-      <div className="md:col-span-5 order-2 md:order-1 flex flex-col items-start justify-center max-w-xl md:pl-12 ml-20 pl-0 pr-0 md:pr-8 relative z-10 w-full">
+      <div className="md:col-span-5 order-2 md:order-1 flex flex-col items-start justify-center max-w-xl md:pl-12 pl-0 pr-0 md:pr-8 relative z-10 w-full">
         <h1 className="text-3xl sm:text-4xl font-extrabold font-mono mb-4 text-[#18181b]">
           Hii, I am Ghanshyam Singh
         </h1>
@@ -190,13 +190,12 @@ const About: React.FC = () => {
         <div className="w-full flex flex-col items-center mt-6">
           <span className="text-xs font-mono text-[#6366f1] mb-1">Contribution Board</span>
           <img
-            src={`https://ghchart.rshah.org/006d32/${GITHUB_USERNAME}`}
-            alt="GitHub Contribution Chart"
-            className="rounded-xl shadow-md"
-            width={320}
-            height={60}
-            loading="lazy"
-          />
+  src={`https://ghchart.rshah.org/006d32/${GITHUB_USERNAME}`}
+  alt="GitHub Contribution Chart"
+  className="rounded-xl shadow-md w-full max-w-xs"
+  style={{ height: "auto" }}
+  loading="lazy"
+/>
         </div>
       </div>
       <style>{`

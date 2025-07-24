@@ -4,7 +4,7 @@ import { Database, Cloud, Zap, Shield, Globe } from "lucide-react";
 
 const skills = [
   {
-    icon: <Globe className="w-8 h-8 text-blue-400" />,
+    icon: <Globe className="w-8 h-8 text-[#6366f1]" />,
     title: "Frontend",
     items: [
       "React, Next.js, TypeScript, JavaScript",
@@ -13,7 +13,7 @@ const skills = [
     ],
   },
   {
-    icon: <Database className="w-8 h-8 text-green-400" />,
+    icon: <Database className="w-8 h-8 text-[#22c55e]" />,
     title: "Backend",
     items: [
       "Node.js, Express.js, Python, Go, Rust, Java, C++, .NET",
@@ -22,7 +22,7 @@ const skills = [
     ],
   },
   {
-    icon: <Database className="w-8 h-8 text-red-400" />,
+    icon: <Database className="w-8 h-8 text-[#ef4444]" />,
     title: "Databases",
     items: [
       "MongoDB, PostgreSQL, MySQL, Redis",
@@ -31,7 +31,7 @@ const skills = [
     ],
   },
   {
-    icon: <Cloud className="w-8 h-8 text-cyan-400" />,
+    icon: <Cloud className="w-8 h-8 text-[#06b6d4]" />,
     title: "Cloud & DevOps",
     items: [
       "AWS, Google Cloud, Vercel, Netlify",
@@ -40,7 +40,7 @@ const skills = [
     ],
   },
   {
-    icon: <Zap className="w-8 h-8 text-violet-400" />,
+    icon: <Zap className="w-8 h-8 text-[#a78bfa]" />,
     title: "AI / ML",
     items: [
       "OpenAI, Google Gemini API",
@@ -49,7 +49,7 @@ const skills = [
     ],
   },
   {
-    icon: <Shield className="w-8 h-8 text-yellow-400" />,
+    icon: <Shield className="w-8 h-8 text-[#facc15]" />,
     title: "Blockchain",
     items: [
       "Solidity, Ethereum, Web3",
@@ -70,18 +70,18 @@ const cardVariants = {
 };
 
 const Skills: React.FC = () => (
-  <section id="skills" className="relative w-full mx-auto py-16 px-4 flex flex-col items-center gap-8 bg-gradient-to-br from-[#0f172a] via-[#312e81] to-[#7c3aed]">
-    <div className="soft-bg"></div>
+  <section id="skills" className="w-full mx-auto py-16 px-4 flex flex-col items-center gap-8">
     <motion.h2
       initial={{ opacity: 0, y: -30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, type: "spring" }}
-      className="text-3xl sm:text-4xl font-extrabold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a78bfa] font-mono tracking-tight"
+      className="text-3xl sm:text-4xl font-extrabold mb-10 z-10 text-center font-mono tracking-tight text-[#18181b]"
+      style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
     >
       Skills
     </motion.h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative max-w-5xl mx-auto py-20 px-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
       {skills.map((skill, i) => (
         <motion.div
           key={skill.title}
@@ -90,11 +90,16 @@ const Skills: React.FC = () => (
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={cardVariants}
-          className="glass-card border border-[#6366f1] rounded-xl p-7 shadow-2xl hover:shadow-lg transition-all flex flex-col items-start group relative overflow-hidden"
+          className="flex flex-col items-start group relative rounded-xl border border-[#e5e7eb] bg-white/80 hover:bg-white/100 shadow-md hover:shadow-lg p-6 transition-all"
         >
           <div className="mb-4">{skill.icon}</div>
-          <h3 className="text-xl font-semibold mb-2 text-[#312e81] dark:text-[#a78bfa] font-mono">{skill.title}</h3>
-          <ul className="list-disc list-inside text-[#6366f1] dark:text-[#a78bfa] text-sm space-y-1 font-mono">
+          <h3
+            className="text-xl font-bold mb-2 font-mono text-[#18181b]"
+            style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
+          >
+            {skill.title}
+          </h3>
+          <ul className="list-disc list-inside text-[#6366f1] text-sm space-y-1 font-mono">
             {skill.items.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}

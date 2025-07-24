@@ -10,33 +10,9 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #fff;
-  color: #18181b;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
 h1, h2, h3, h4, h5, h6, code, pre {
-  font-family: 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
-  letter-spacing: -0.01em;
-}
-
-.dark body {
-  background-color: #18181b;
-  color: #f3f4f6;
-}
-
-/* Selection color */
-::selection {
-  background: #6366f1;
-  color: #fff;
-}
-
-/* Focus ring for accessibility */
-:focus-visible {
-  outline: 2px solid #a78bfa;
-  outline-offset: 2px;
-  transition: outline 0.2s;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
 }
 
 /* Animations */
@@ -55,41 +31,6 @@ h1, h2, h3, h4, h5, h6, code, pre {
 .animate-wiggle {
   display: inline-block;
   animation: wiggle 1.2s infinite;
-}
-
-/* Remove glows for a cleaner look */
-.drop-shadow-glow {
-  filter: none !important;
-}
-
-/* Modern glassmorphism card utility */
-.glass-card {
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(18px) saturate(200%);
-  border-radius: 1.5rem;
-  border: 2px solid #6366f1;
-  box-shadow: 0 4px 24px 0 rgba(99,102,241,0.10);
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-.glass-card:focus-within, .glass-card:hover {
-  border-color: #a78bfa;
-  box-shadow: 0 8px 32px 0 rgba(99,102,241,0.18);
-}
-.dark .glass-card {
-  background: rgba(24,24,27,0.82);
-  border: 2px solid #a78bfa;
-}
-
-/* Soft radial background for hero/about/sections */
-.soft-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, #a78bfa33 0%, #fff0 100%);
-}
-.dark .soft-bg {
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, #a78bfa44 0%, #18181b 100%);
 }
 
 /* Responsive tweaks for cards/sections */

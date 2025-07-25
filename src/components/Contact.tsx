@@ -16,7 +16,7 @@ const Contact: React.FC = () => (
         href="https://iron-industry.tech/"
         target="_blank"
         rel="noopener noreferrer"
-        className="px-5 py-2 font-semibold text-[#6366f1] hover:underline font-mono transition"
+        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
         style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
       >
         Startup
@@ -25,7 +25,7 @@ const Contact: React.FC = () => (
         href="https://www.linkedin.com/in/ghanshyam-singh-b014232b2/"
         target="_blank"
         rel="noopener noreferrer"
-        className="px-5 py-2 font-semibold text-[#6366f1] hover:underline font-mono transition"
+        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
         style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
       >
         LinkedIn
@@ -34,7 +34,7 @@ const Contact: React.FC = () => (
         href="https://discord.gg/FFEZqzGwtG"
         target="_blank"
         rel="noopener noreferrer"
-        className="px-5 py-2 font-semibold text-[#6366f1] hover:underline font-mono transition"
+        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
         style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
       >
         Discord
@@ -43,7 +43,7 @@ const Contact: React.FC = () => (
         href="https://github.com/ghanshyam2005singh"
         target="_blank"
         rel="noopener noreferrer"
-        className="px-5 py-2 font-semibold text-[#6366f1] hover:underline font-mono transition"
+        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
         style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
       >
         GitHub
@@ -52,13 +52,13 @@ const Contact: React.FC = () => (
         href="https://twitter.com/https_ghanshyam"
         target="_blank"
         rel="noopener noreferrer"
-        className="px-5 py-2 font-semibold text-[#6366f1] hover:underline font-mono transition"
+        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
         style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
       >
         Twitter
       </a>
     </div>
-    <p className="text-xs text-[#6366f1] mt-4 font-mono text-center">
+    <p className="text-xs z-10 text-[#6366f1] mt-4 font-mono text-center">
       Email: <span className="underline">ghanshyam2005singh@gmail.com</span>
     </p>
   </section>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type BlogEntry = {
   year: string;
@@ -44,11 +44,24 @@ Fascinated by how things work, I tinkered with engines, machines, and IoT, build
 const History: React.FC = () => {
   const [blogs, setBlogs] = useState(initialBlogs);
   const [expanded, setExpanded] = useState<number | null>(null);
+  const [liked, setLiked] = useState<{ [key: number]: boolean }>({});
+
+  // Load liked state from localStorage
+  useEffect(() => {
+    const likedFromStorage = localStorage.getItem("blogLikes");
+    if (likedFromStorage) {
+      setLiked(JSON.parse(likedFromStorage));
+    }
+  }, []);
 
   const handleLike = (idx: number) => {
+    if (liked[idx]) return;
     setBlogs((prev) =>
       prev.map((b, i) => (i === idx ? { ...b, likes: b.likes + 1 } : b))
     );
+    const newLiked = { ...liked, [idx]: true };
+    setLiked(newLiked);
+    localStorage.setItem("blogLikes", JSON.stringify(newLiked));
   };
 
   return (
@@ -71,9 +84,14 @@ const History: React.FC = () => {
             </p>
             <div className="flex items-center gap-4 mt-auto">
               <button
-                className="flex items-center text-[#6366f1] font-bold hover:underline transition"
+                className={`flex items-center font-bold transition ${
+                  liked[idx]
+                    ? "text-gray-400 cursor-not-allowed"
+                    : "text-[#6366f1] hover:underline"
+                }`}
                 onClick={() => handleLike(idx)}
                 aria-label="Like this blog"
+                disabled={liked[idx]}
               >
                 <svg width="20" height="20" fill="currentColor" className="mr-1">
                   <path d="M10 18l-1.45-1.32C4.4 12.36 2 10.28 2 7.5 2 5.5 3.5 4 5.5 4c1.54 0 3.04.99 3.57 2.36h1.87C11.46 4.99 12.96 4 14.5 4 16.5 4 18 5.5 18 7.5c0 2.78-2.4 4.86-6.55 9.18L10 18z" />

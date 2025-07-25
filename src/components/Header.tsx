@@ -13,7 +13,7 @@ const Header: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Twitter"
-          className="text-[#6366f1] hover:text-[#1da1f2] transition"
+          className="text-[#6366f1] hover:text-[#1da1f2] transition z-10"
         >
           <Twitter className="w-6 h-6" />
         </a>
@@ -22,7 +22,7 @@ const Header: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          className="text-[#6366f1] hover:text-black dark:hover:text-white transition"
+          className="text-[#6366f1] hover:text-[#1da1f2] transition z-10"
         >
           <Github className="w-6 h-6" />
         </a>
@@ -31,7 +31,7 @@ const Header: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          className="text-[#6366f1] hover:text-[#0a66c2] transition"
+          className="text-[#6366f1] hover:text-[#1da1f2] transition z-10"
         >
           <Linkedin className="w-6 h-6" />
         </a>

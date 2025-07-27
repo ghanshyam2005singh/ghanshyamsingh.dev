@@ -50,7 +50,7 @@ const skills = [
   },
   {
     icon: <Shield className="w-8 h-8 text-[#facc15]" />,
-    title: "Blockchain",
+    title: "Blockchain (Learning)",
     items: [
       "Solidity, Ethereum, Web3",
       "Smart Contracts, DApps",

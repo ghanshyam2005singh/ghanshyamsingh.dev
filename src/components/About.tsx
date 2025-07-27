@@ -170,7 +170,7 @@ const About: React.FC = () => {
             <div className="text-xs font-mono text-[#6366f1]">Highest Streak</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.public_repos ?? "85"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.public_repos ?? "90"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Repos</div>
           </div>
           <div>

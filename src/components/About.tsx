@@ -7,9 +7,9 @@ const pauseTime = 1000;
 
 const GITHUB_USERNAME = "ghanshyam2005singh";
 
-// These values are from your README and will be used as fallback/static for total contributions and highest streak
-const STATIC_TOTAL_CONTRIBUTIONS = 900; // Replace with your actual value from README
-const STATIC_HIGHEST_STREAK = 45;        // Replace with your actual value from README
+// Updated values from your latest GitHub stats
+const STATIC_TOTAL_CONTRIBUTIONS = 1000; // Updated
+const STATIC_HIGHEST_STREAK = 45;        // Updated
 
 const Typewriter: React.FC = () => {
   const [text, setText] = React.useState("");
@@ -113,7 +113,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="w-full flex flex-col md:grid md:grid-cols-12 items-center justify-center min-h-[70vh] py-12 px-4 sm:px-8 md:gap-6 gap-8"
+      className="w-full flex flex-col md:grid md:grid-cols-12 items-center justify-center min-h-[70vh] py-12 px-4 sm:px-8 md:gap-6 gap-8 z-10"
     >
       {/* About Text */}
       <div className="md:col-span-5 order-2 md:order-1 flex flex-col items-start justify-center max-w-xl md:pl-12 pl-0 pr-0 md:pr-8 relative z-10 w-full">
@@ -138,7 +138,7 @@ const About: React.FC = () => {
           </li>
         </ul>
         <blockquote className="italic text-[#312e81] mt-4 text-base sm:text-lg font-semibold font-mono">
-          &quot;I don’t just build apps—I create ecosystems that empower people.&quot;
+          &quot;I don&apos;t just build apps—I create ecosystems that empower people.&quot;
         </blockquote>
       </div>
       {/* Photo */}
@@ -170,32 +170,32 @@ const About: React.FC = () => {
             <div className="text-xs font-mono text-[#6366f1]">Highest Streak</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.public_repos ?? "90"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.public_repos ?? "96"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Repos</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.followers ?? "22"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.followers ?? "27"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Followers</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.totalPRs ?? "52"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.totalPRs ?? "77"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Pull Requests</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.totalIssues ?? "--"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.totalIssues ?? "25"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Issues</div>
           </div>
         </div>
         {/* Contribution Board (as image, since API not available) */}
         <div className="w-full flex flex-col items-center mt-6">
           <span className="text-xs font-mono text-[#6366f1] mb-1">Contribution Board</span>
-          <img
-  src={`https://ghchart.rshah.org/006d32/${GITHUB_USERNAME}`}
-  alt="GitHub Contribution Chart"
-  className="rounded-xl shadow-md w-full max-w-xs"
-  style={{ height: "auto" }}
-  loading="lazy"
-/>
+          <Image
+            src={`https://ghchart.rshah.org/006d32/${GITHUB_USERNAME}`}
+            alt="GitHub Contribution Chart"
+            className="rounded-xl shadow-md w-full max-w-xs"
+            style={{ height: "auto" }}
+            loading="lazy"
+          />
         </div>
       </div>
       <style>{`

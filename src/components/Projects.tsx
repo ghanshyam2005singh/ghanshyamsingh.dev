@@ -27,7 +27,7 @@ const projects: Project[] = [
   },
   {
     name: "CV-Slayer",
-    url: "https://github.com/ghanshyam2005singh/CV-Slayer",
+    url: "https://cv-slayer-ppnn.onrender.com/",
     description: "AI-powered resume reviewer.",
     stack: "React, Node.js, Express.js, MongoDB, LLM",
     status: "✅ Completed",
@@ -124,7 +124,7 @@ const cardVariants = {
 const Projects: React.FC = () => (
   <section
     id="projects"
-    className="w-full mx-auto py-16 px-4 flex flex-col items-center gap-8"
+    className="w-full mx-auto py-16 px-4 flex flex-col items-center gap-8 z-10"
   >
     <motion.h2
       initial={{ opacity: 0, y: -30 }}

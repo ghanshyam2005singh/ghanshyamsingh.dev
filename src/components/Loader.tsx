@@ -1,79 +1,88 @@
 import React, { useEffect, useState } from "react";
 
-const scriptLines = [
-  "Welcome, human.",
-  "Booting up creativity...",
-  "Syncing code neurons...",
-  "Loading your experience...",
-  "Ready to build. 🚀"
+const funnyQuotes = [
+  "\"There are only 10 types of people in the world: those who understand binary and those who don't.\" 😄",
+  "\"A programmer's wife asks: 'Would you go to the shop and pick up a loaf of bread? And if they have eggs, get a dozen.' The programmer returns home with 12 loaves of bread.\" 🍞",
+  "\"Why do programmers prefer dark mode? Because light attracts bugs!\" 🐛",
+  "\"99 little bugs in the code, 99 little bugs. Take one down, patch it around... 117 little bugs in the code.\" 🔧",
+  "\"A SQL query goes into a bar, walks up to two tables and asks... 'Can I join you?'\" 🍺",
+  "\"How many programmers does it take to change a light bulb? None. That's a hardware problem.\" 💡"
 ];
 
 const Loader: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
-  const [current, setCurrent] = useState(0);
-  const [typed, setTyped] = useState("");
+  const [displayText, setDisplayText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+  const [currentQuote, setCurrentQuote] = useState(0);
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
 
-  // Typewriter effect for each line
+  // Initialize quote selection on client side only
   useEffect(() => {
-    if (current < scriptLines.length) {
-      setTyped("");
-      let i = 0;
-      const typeInterval = setInterval(() => {
-        setTyped(scriptLines[current].slice(0, i));
-        i++;
-        if (i > scriptLines[current].length) {
-          clearInterval(typeInterval);
-          setTimeout(() => setCurrent(current + 1), 100);
-        }
-      }, 20);
-      return () => clearInterval(typeInterval);
-    } else {
-      setTimeout(onFinish, 200);
+    if (typeof window !== 'undefined') {
+      const visitCount = parseInt(localStorage.getItem('visitCount') || '0');
+      const quoteIndex = visitCount % funnyQuotes.length;
+      localStorage.setItem('visitCount', (visitCount + 1).toString());
+      setCurrentQuote(quoteIndex);
     }
-  }, [current, onFinish]);
+  }, []);
 
-  // Animated geometric loader
+  useEffect(() => {
+    const quote = funnyQuotes[currentQuote];
+    
+    if (charIndex < quote.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(quote.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      }, 15); // Faster typing speed
+      
+      return () => clearTimeout(timeout);
+    } else {
+      // Mark typing as complete, show next button
+      setIsTypingComplete(true);
+    }
+  }, [charIndex, currentQuote]);
+
+  const handleNext = () => {
+    onFinish();
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white/90 backdrop-blur">
-      {/* Geometric Loader */}
-      <div className="mb-10">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] backdrop-blur">
+      {/* Code-themed Loader */}
+      <div className="mb-8">
         <div className="relative w-20 h-20">
-          <span className="absolute inset-0 rounded-full border-4 border-[#6366f1] border-t-transparent animate-spin-slow"></span>
-          <span className="absolute inset-3 rounded-full border-2 border-[#6366f1]/60 border-b-transparent animate-spin-reverse"></span>
-          <span className="absolute left-1/2 top-1/2 w-4 h-4 -translate-x-1/2 -translate-y-1/2 bg-[#6366f1] rounded-full shadow-lg"></span>
+          {/* Outer ring */}
+          <span className="absolute inset-0 rounded-full border-4 border-[#6366f1] border-t-transparent animate-spin"></span>
+          {/* Inner ring */}
+          <span className="absolute inset-2 rounded-full border-2 border-[#8b5cf6] border-b-transparent animate-spin" style={{animationDirection: 'reverse'}}></span>
+          {/* Center brackets */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[#6366f1] font-bold text-lg animate-pulse">
+            {'{ }'}
+          </div>
         </div>
       </div>
-      {/* Typewriter lines */}
-      <div className="w-full max-w-md font-mono text-[#18181b] text-lg font-semibold tracking-wide text-center drop-shadow-lg z-10">
-        {Array.from({ length: current }).map((_, idx) => (
-          <div key={idx} className="mb-1">{scriptLines[idx]}</div>
-        ))}
-        {current < scriptLines.length && (
-          <div>
-            {typed}
-            <span className="animate-blink text-[#6366f1]">|</span>
+      
+      {/* Single Quote Display */}
+      <div className="w-full max-w-2xl font-mono text-[#18181b] text-lg text-center px-6">
+        <div className="bg-white/80 rounded-2xl p-6 shadow-lg border border-[#e5e7eb]">
+          <div className="text-[#6366f1] mb-2 text-sm font-semibold">Developer Humor</div>
+          <div className="min-h-[80px] flex items-center justify-center">
+            {displayText}
+            {!isTypingComplete && <span className="animate-pulse text-[#8b5cf6] ml-1">|</span>}
           </div>
-        )}
+          
+          {/* Next Button - appears after typing is complete */}
+          {isTypingComplete && (
+            <div className="mt-6">
+              <button
+                onClick={handleNext}
+                className="px-6 py-2 bg-[#6366f1] text-white font-mono font-semibold rounded-lg hover:bg-[#7c3aed] transition-colors shadow-md"
+              >
+                Enter Portfolio →
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-      <style>{`
-        .animate-blink {
-          animation: blink 0.8s steps(2, start) infinite;
-        }
-        @keyframes blink {
-          to { opacity: 0; }
-        }
-        .animate-spin-slow {
-          animation: spin 2.2s linear infinite;
-        }
-        .animate-spin-reverse {
-          animation: spin-reverse 1.7s linear infinite;
-        }
-        @keyframes spin {
-          to { transform: rotate(360deg); }
-        }
-        @keyframes spin-reverse {
-          to { transform: rotate(-360deg); }
-        }
-      `}</style>
     </div>
   );
 };

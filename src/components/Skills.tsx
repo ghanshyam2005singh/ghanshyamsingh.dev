@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Database, Cloud, Zap, Shield, Globe, Server, Layers, Users, Award } from "lucide-react";
 
 const skills = [
@@ -89,37 +88,18 @@ const skills = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.97 },
-  visible: (i: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { delay: i * 0.13, type: "spring" as const, stiffness: 120 }
-  }),
-};
-
 const Skills: React.FC = () => (
   <section id="skills" className="w-full mx-auto py-16 px-4 flex flex-col items-center gap-8 z-10">
-    <motion.h2
-      initial={{ opacity: 0, y: -30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7, type: "spring" }}
+    <h2
       className="text-3xl sm:text-4xl font-extrabold mb-10 z-10 text-center font-mono tracking-tight text-[#18181b]"
       style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
     >
       Skills & Experience
-    </motion.h2>
+    </h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl z-10">
-      {skills.map((skill, i) => (
-        <motion.div
+      {skills.map((skill) => (
+        <div
           key={skill.title}
-          custom={i}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
           className="flex flex-col items-start group relative rounded-xl border border-[#e5e7eb] bg-white/80 hover:bg-white/100 shadow-md hover:shadow-lg p-6 transition-all"
         >
           <div className="mb-4">{skill.icon}</div>
@@ -134,7 +114,7 @@ const Skills: React.FC = () => (
               <li key={idx}>{item}</li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       ))}
     </div>
     <div className="mt-8 w-full text-center z-10">

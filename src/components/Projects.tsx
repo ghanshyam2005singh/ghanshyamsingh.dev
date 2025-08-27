@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 type Project = {
@@ -111,43 +110,24 @@ const projects: Project[] = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.97 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { delay: i * 0.09, type: "spring" as const, stiffness: 120 }
-  }),
-};
-
 const Projects: React.FC = () => (
   <section
     id="projects"
     className="w-full mx-auto py-16 px-4 flex flex-col items-center gap-8 z-10"
   >
-    <motion.h2
-      initial={{ opacity: 0, y: -30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7, type: "spring" }}
+    <h2
       className="text-3xl sm:text-4xl font-extrabold mb-10 text-center font-mono tracking-tight text-[#18181b]"
       style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
     >
       Projects
-    </motion.h2>
+    </h2>
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 relative max-w-6xl mx-auto">
-      {projects.map((project, i) => (
-        <motion.a
+      {projects.map((project) => (
+        <a
           key={project.name}
           href={project.url}
           target="_blank"
           rel="noopener noreferrer"
-          custom={i}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
           className="group block transition-all relative overflow-visible rounded-xl border border-[#e5e7eb] bg-white/80 hover:bg-white/100 shadow-md hover:shadow-lg p-6"
         >
           <div className="flex items-center justify-between mb-2">
@@ -159,7 +139,7 @@ const Projects: React.FC = () => (
           </div>
           <p className="text-[#312e81] mb-2 font-mono">{project.description}</p>
           <div className="text-xs text-[#6366f1] font-mono">{project.stack}</div>
-        </motion.a>
+        </a>
       ))}
     </div>
   </section>

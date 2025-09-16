@@ -49,6 +49,14 @@ const achievements = [
 const workExperience = [
   {
     icon: <Briefcase className="w-6 h-6 text-[#6366f1]" />,
+    role: "Kubestellar Intern (Remote)",
+    org: "CNCF(Cloud Native Computing Foundation)",
+    period: "Sept 2025 –  Nov 2025",
+    desc: "Contributed to Kubestellar, a CNCF project, enhancing Kubernetes multi-cluster management. Implemented features in Go and collaborated with global developers.",
+    highlights: ["CNCF project contribution", "Kubernetes multi-cluster management", "Go programming" ],
+  },
+  {
+    icon: <Briefcase className="w-6 h-6 text-[#6366f1]" />,
     role: "Full Stack Intern (Remote)",
     org: "DevRhylme Foundation",
     period: "Dec 2024 – May 2025",

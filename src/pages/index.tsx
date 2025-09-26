@@ -6,6 +6,7 @@ import Academics from "../components/Academics";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import AchievmentsAndWorkExperience from "../components/AchievmentsAndWorkExperience";
+import MediaCoverage from "../components/MediaCoverage";
 import History from "../components/History";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -50,6 +51,7 @@ const Home: React.FC = () => {
               <Skills />
               <AchievmentsAndWorkExperience />
               <Projects />
+              <MediaCoverage />
               <History />
               <Contact />
             </main>

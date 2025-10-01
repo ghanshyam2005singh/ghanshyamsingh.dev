@@ -11,27 +11,6 @@ type Project = {
 
 const projects: Project[] = [
   {
-    name: "Alumconn",
-    url: "https://alumconn.in",
-    description: "Secure alumni-student networking platform.",
-    stack: "Next.js, TypeScript, Prisma, PostgreSQL, Tailwind CSS",
-    status: "🟢 Live",
-  },
-  {
-    name: "Padh-le-Bhai",
-    url: "https://padh-le-bhai-one.vercel.app/",
-    description: "Student notes & assignment sharing platform.",
-    stack: "Next.js, Google Cloud Services, Firebase, Supabase, Tailwind CSS",
-    status: "🟢 Live",
-  },
-  {
-    name: "CV-Slayer",
-    url: "https://cv-slayer-ppnn.onrender.com/",
-    description: "AI-powered resume reviewer.",
-    stack: "React, Node.js, Express.js, MongoDB, LLM",
-    status: "✅ Completed",
-  },
-  {
     name: "Homie-Finder",
     url: "https://github.com/ghanshyam2005singh/Homie-Finder",
     description: "Smart roommate matching for students.",
@@ -119,7 +98,7 @@ const Projects: React.FC = () => (
       className="text-3xl sm:text-4xl font-extrabold mb-10 text-center font-mono tracking-tight text-[#18181b]"
       style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
     >
-      Projects
+      Additional Projects
     </h2>
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 relative max-w-6xl mx-auto">
       {projects.map((project) => (

@@ -50,8 +50,8 @@ const Home: React.FC = () => {
               <Academics />
               <Skills />
               <AchievmentsAndWorkExperience />
-              <Projects />
               <MediaCoverage />
+              <Projects />
               <History />
               <Contact />
             </main>

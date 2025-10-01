@@ -4,7 +4,6 @@ import Image from "next/image";
 const MediaCoverage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // Your actual media coverage data
   const newsLinks = [
     {
       title: "Times of India Coverage",
@@ -85,6 +84,8 @@ const MediaCoverage: React.FC = () => {
                   <Image
                     src={photo}
                     alt={`Media coverage ${index + 1}`}
+                    width={600}
+                    height={400}
                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -104,6 +105,8 @@ const MediaCoverage: React.FC = () => {
             <Image
               src={selectedImage}
               alt="Full size media coverage"
+              width={1000}
+              height={700}
               className="max-w-full max-h-full object-contain"
             />
             <button

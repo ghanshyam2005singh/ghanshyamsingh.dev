@@ -3,6 +3,12 @@ import { Briefcase, Award, Users, Trophy, Shield, Star } from "lucide-react";
 
 const achievements = [
   {
+    icon: <Users className="w-6 h-6 text-[#22c55e]" />,
+    title: "Google Cloud Arcade Facilitator 2025",
+    desc: "Guided 300+ learners through hands-on cloud labs and Google Cloud technologies.",
+    year: "2025",
+  },
+  {
     icon: <Trophy className="w-6 h-6 text-[#f59e0b]" />,
     title: "BNB Chain Gig 2024 Winner",
     desc: "Built scalable decentralized app handling 1K+ transactions with team.",
@@ -13,12 +19,6 @@ const achievements = [
     title: "AWS GenAI & Postman API Expert Certified",
     desc: "Completed AWS GenAI Certificate and Postman API Expert certification.",
     year: "2024",
-  },
-  {
-    icon: <Users className="w-6 h-6 text-[#22c55e]" />,
-    title: "Google Cloud Arcade Facilitator 2025",
-    desc: "Guided 300+ learners through hands-on cloud labs and Google Cloud technologies.",
-    year: "2025",
   },
   {
     icon: <Trophy className="w-6 h-6 text-[#6366f1]" />,
@@ -107,14 +107,13 @@ const projects = [
 
 const AchievmentsAndWorkExperience: React.FC = () => (
   <section id="achievements" className="w-full mx-auto py-16 px-4 flex flex-col items-center z-10">
-    <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 text-center font-mono tracking-tight text-[#18181b] z-10">
-      Experience, Achievements & Projects
-    </h2>
     
     <div className="w-full max-w-6xl space-y-12 z-10">
       {/* Work Experience */}
       <div>
-        <h3 className="text-2xl font-bold mb-6 font-mono text-[#6366f1] z-10">Work Experience</h3>
+<h2 className="text-3xl sm:text-4xl font-extrabold mb-10 text-center font-mono tracking-tight text-[#18181b] z-10">
+      Experience
+    </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 z-10">
           {workExperience.map((item, idx) => (
             <div key={idx} className="bg-white/90 rounded-xl shadow-md border border-[#e5e7eb] p-6 flex flex-col">
@@ -141,7 +140,9 @@ const AchievmentsAndWorkExperience: React.FC = () => (
 
       {/* Key Projects */}
       <div>
-        <h3 className="text-2xl font-bold mb-6 font-mono text-[#6366f1] z-10">Key Projects</h3>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 text-center font-mono tracking-tight text-[#18181b] z-10">
+      Key Projects
+    </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 z-10">
           {projects.map((project, idx) => (
             <div key={idx} className="bg-white/90 rounded-xl shadow-md border border-[#e5e7eb] p-6 flex flex-col">
@@ -184,7 +185,9 @@ const AchievmentsAndWorkExperience: React.FC = () => (
 
       {/* Achievements & Certifications */}
       <div>
-        <h3 className="text-2xl font-bold mb-6 font-mono text-[#6366f1] z-10">Achievements & Leadership</h3>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 text-center font-mono tracking-tight text-[#18181b] z-10">
+      Achievements
+    </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 z-10">
           {achievements.map((item, idx) => (
             <div key={idx} className="bg-white/90 rounded-xl shadow-md border border-[#e5e7eb] p-6 flex flex-col">

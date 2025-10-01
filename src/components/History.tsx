@@ -10,19 +10,10 @@ type BlogEntry = {
 
 const initialBlogs: BlogEntry[] = [
   {
-    year: "2016",
-    title: "First Steps in Tech",
-    short: "Curiosity sparked with my first gadget teardown and a taste of coding.",
-    full: "2016 was the year I first opened up a gadget to see what was inside. I started learning about how computers work, wrote my first lines of code, and realized tech could be my playground.",
-    likes: 0,
-  },
-  {
-    year: "2019",
-    title: "Hacker Mode: Activated",
-    short: "Started my tech journey with a 2GB RAM phone, hacking, building, and exploring.",
-    full: `My tech journey began in 2019, armed with nothing but a 2GB RAM phone and an insatiable curiosity. I installed Kali Nethunter and Termux, diving headfirst into the world of cybersecurity. I learned about RATs, Metasploit, payload binding, TCP, and HTML—spending countless nights exploring the basics of hacking and digital defense.
-
-Fascinated by how things work, I tinkered with engines, machines, and IoT, building gadgets from scratch and understanding the magic behind automation.`,
+    year: "2025",
+    title: "Building for the Future",
+    short: "Now building startups, mentoring, and contributing to the community.",
+    full: `Today, I’m building startups, mentoring others, and contributing to communities. My journey is a blend of failures, wins, and relentless learning—a story that’s still being written.`,
     likes: 0,
   },
   {
@@ -32,11 +23,20 @@ Fascinated by how things work, I tinkered with engines, machines, and IoT, build
     full: `When I finally got my first laptop, a new world opened up. I attended my first tech event, learned frontend development, and ambitiously tried for GSoC—failing, but learning. I entered hackathons and open source programs like SSOC, Microsoft Engage, and GSSOC, each time growing stronger from setbacks.`,
     likes: 0,
   },
+   {
+    year: "2019",
+    title: "Hacker Mode: Activated",
+    short: "Started my tech journey with a 2GB RAM phone, hacking, building, and exploring.",
+    full: `My tech journey began in 2019, armed with nothing but a 2GB RAM phone and an insatiable curiosity. I installed Kali Nethunter and Termux, diving headfirst into the world of cybersecurity. I learned about RATs, Metasploit, payload binding, TCP, and HTML—spending countless nights exploring the basics of hacking and digital defense.
+
+Fascinated by how things work, I tinkered with engines, machines, and IoT, building gadgets from scratch and understanding the magic behind automation.`,
+    likes: 0,
+  },
   {
-    year: "2025",
-    title: "Building for the Future",
-    short: "Now building startups, mentoring, and contributing to the community.",
-    full: `Today, I’m building startups, mentoring others, and contributing to communities. My journey is a blend of failures, wins, and relentless learning—a story that’s still being written.`,
+    year: "2016",
+    title: "First Steps in Tech",
+    short: "Curiosity sparked with my first gadget teardown and a taste of coding.",
+    full: "2016 was the year I first opened up a gadget to see what was inside. I started learning about how computers work, wrote my first lines of code, and realized tech could be my playground.",
     likes: 0,
   },
 ];

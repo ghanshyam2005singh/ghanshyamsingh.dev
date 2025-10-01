@@ -38,7 +38,7 @@ const skills = [
     items: [
       "AWS (Educate, Skill Builder, S3, RDS, EC2, IAM, VPC, Elastic Beanstalk, CloudWatch)",
       "Google Cloud (Compute, Storage, Monitoring)",
-      "Vercel, Netlify, Render, Cloudflare CDN",
+      "Kubernetes, Kubestellar",
       "Docker (Dockerfile, Compose, Image, Container, Volume, Network)",
       "CI/CD Pipeline, Nginx, Rate Limiting, CORS",
     ],
@@ -69,15 +69,6 @@ const skills = [
     ],
   },
   {
-    icon: <Users className="w-8 h-8 text-[#06b6d4]" />,
-    title: "Collaboration & Community",
-    items: [
-      "Open Source Contributions, Technical Blogging",
-      "Mentoring, Team Leadership, User Growth (+X% increase)",
-      "LeetCode Profile, Resume Optimization (ATS friendly)",
-    ],
-  },
-  {
     icon: <Award className="w-8 h-8 text-[#f59e42]" />,
     title: "Certifications",
     items: [
@@ -94,7 +85,7 @@ const Skills: React.FC = () => (
       className="text-3xl sm:text-4xl font-extrabold mb-10 z-10 text-center font-mono tracking-tight text-[#18181b]"
       style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
     >
-      Skills & Experience
+      Skills
     </h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl z-10">
       {skills.map((skill) => (

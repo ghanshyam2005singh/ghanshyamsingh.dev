@@ -124,22 +124,8 @@ const About: React.FC = () => {
           <Typewriter />
         </h2>
         <p className="text-base sm:text-lg font-sans text-[#18181b]">
-          I love building things for the web, exploring new tech, and sharing knowledge with the community.
+          I love building things for the web, Building tools for students, developers and Exploring new tech, AI.
         </p>
-        <ul className="flex flex-col gap-2 mt-4 text-sm sm:text-base text-[#6366f1] font-mono">
-          <li>
-            <span className="font-bold text-[#7c3aed]">{`Product Mindset:`}</span> Focused on real-world impact and user-centric solutions.
-          </li>
-          <li>
-            <span className="font-bold text-[#7c3aed]">{`Community-Driven:`}</span> Building tools for students, developers, and underrepresented groups.
-          </li>
-          <li>
-            <span className="font-bold text-[#7c3aed]">{`Always Learning:`}</span> Exploring new tech, AI, and best practices.
-          </li>
-        </ul>
-        <blockquote className="italic text-[#312e81] mt-4 text-base sm:text-lg font-semibold font-mono">
-          &quot;I don&apos;t just build apps—I create ecosystems that empower people.&quot;
-        </blockquote>
       </div>
       {/* Photo */}
       <div className="md:col-span-4 order-1 md:order-2 flex flex-col items-center justify-center relative z-10 w-full md:w-auto mb-8 md:mb-0">

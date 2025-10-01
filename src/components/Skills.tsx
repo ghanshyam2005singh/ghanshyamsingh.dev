@@ -1,5 +1,5 @@
 import React from "react";
-import { Database, Cloud, Zap, Shield, Globe, Server, Layers, Users, Award } from "lucide-react";
+import { Database, Cloud, Zap, Shield, Globe, Server, Layers, Award } from "lucide-react";
 
 const skills = [
   {

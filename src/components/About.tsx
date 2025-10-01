@@ -175,6 +175,7 @@ const About: React.FC = () => {
         {/* Contribution Board (as image, since API not available) */}
         <div className="w-full flex flex-col items-center mt-6">
           <span className="text-xs font-mono text-[#6366f1] mb-1">Contribution Board</span>
+          
           <img
             src={`https://ghchart.rshah.org/006d32/${GITHUB_USERNAME}`}
             alt="GitHub Contribution Chart"

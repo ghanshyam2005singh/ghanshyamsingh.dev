@@ -8,7 +8,7 @@ const pauseTime = 1000;
 const GITHUB_USERNAME = "ghanshyam2005singh";
 
 // Updated values from your latest GitHub stats
-const STATIC_TOTAL_CONTRIBUTIONS = 1200; // Updated
+const STATIC_TOTAL_CONTRIBUTIONS = 1225; // Updated
 const STATIC_HIGHEST_STREAK = 45;        // Updated
 
 const Typewriter: React.FC = () => {
@@ -148,7 +148,7 @@ const About: React.FC = () => {
         <h3 className="text-xl font-bold font-mono text-[#6366f1] mb-4">GitHub Stats</h3>
         <div className="grid grid-cols-2 gap-4 w-full text-center">
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{STATIC_TOTAL_CONTRIBUTIONS}+</div>
+            <div className="text-2xl font-bold text-[#18181b]">{STATIC_TOTAL_CONTRIBUTIONS}</div>
             <div className="text-xs font-mono text-[#6366f1]">Total Contributions</div>
           </div>
           <div>
@@ -156,19 +156,19 @@ const About: React.FC = () => {
             <div className="text-xs font-mono text-[#6366f1]">Highest Streak</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.public_repos ?? "111"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.public_repos ?? "113"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Repos</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.followers ?? "28"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.followers ?? "31"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Followers</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.totalPRs ?? "90"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.totalPRs ?? "94"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Pull Requests</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-[#18181b]">{github?.totalIssues ?? "35"}</div>
+            <div className="text-2xl font-bold text-[#18181b]">{github?.totalIssues ?? "38"}</div>
             <div className="text-xs font-mono text-[#6366f1]">Issues</div>
           </div>
         </div>

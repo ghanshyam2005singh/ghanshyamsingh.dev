@@ -8,7 +8,7 @@ const pauseTime = 1000;
 const GITHUB_USERNAME = "ghanshyam2005singh";
 
 // Updated values from your latest GitHub stats
-const STATIC_TOTAL_CONTRIBUTIONS = 1225; // Updated
+const STATIC_TOTAL_CONTRIBUTIONS = 1325; // Updated
 const STATIC_HIGHEST_STREAK = 45;        // Updated
 
 const Typewriter: React.FC = () => {

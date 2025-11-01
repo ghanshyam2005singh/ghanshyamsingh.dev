@@ -1,127 +1,181 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
 
 type Project = {
   name: string;
-  url: string;
+  url: string; // GitHub/source code
+  liveUrl?: string; // Live/demo site
   description: string;
   stack: string;
-  status: string;
+  category: "Featured" | "Additional";
 };
 
 const projects: Project[] = [
   {
-    name: "Homie-Finder",
-    url: "https://github.com/ghanshyam2005singh/Homie-Finder",
-    description: "Smart roommate matching for students.",
-    stack: "Next.js, Firebase, Supabase",
-    status: "✅ Completed",
+    name: "Alumconn",
+    url: "https://github.com/ghanshyam2005singh/alumconn",
+    liveUrl: "https://alumconn.in/",
+    description: "Alumni networking platform connecting students with alumni for mentorship, internships, and career guidance. Serving 100+ active users.",
+    stack: "Next.js, TypeScript, Tailwind CSS, Firebase",
+    category: "Featured",
   },
   {
-    name: "Zombie Survival Shooter Game",
-    url: "https://github.com/ghanshyam2005singh/Zombie-Survival-Shooter",
-    description: "Top-down shooter: player vs zombies, score tracking, health system, Firebase integration.",
-    stack: "Phaser 3, Firebase, JavaScript, Vercel",
-    status: "🟡 In Progress",
+    name: "CV Slayer",
+    url: "https://github.com/ghanshyam2005singh/cv-slayer",
+    liveUrl: "https://cv-slayer-ppnn.onrender.com/",
+    description: "AI-powered resume builder helping students create professional resumes with smart templates and optimization suggestions.",
+    stack: "React, Node.js, AI/ML, MongoDB",
+    category: "Featured",
   },
   {
-    name: "Task Manager",
-    url: "https://github.com/ghanshyam2005singh/Task-Manager",
-    description: "Full-stack MERN To-Do app with auth, CRUD, modern UI, and security best practices.",
-    stack: "MongoDB, Express.js, React, Node.js, JWT, Material-UI",
-    status: "✅ Completed",
+    name: "Padh-le-Bhai",
+    url: "https://github.com/ghanshyam2005singh/padh-le-bhai",
+    liveUrl: "https://padh-le-bhai-one.vercel.app/",
+    description: "Educational platform for students with study materials, practice tests, and interactive learning modules.",
+    stack: "Next.js, Firebase, Tailwind CSS",
+    category: "Featured",
   },
-  {
-    name: "Dr. Serena Blake",
-    url: "https://github.com/ghanshyam2005singh/Dr.-Serena-Blake",
-    description: "Therapist website with accessibility focus.",
-    stack: "Next.js, TypeScript",
-    status: "✅ Completed",
-  },
+  // Additional Projects (add liveUrl if available)
   {
     name: "CrediVault",
     url: "https://github.com/ghanshyam2005singh/CrediVault",
-    description: "Decentralized borrowing dApp: lock WBTC, borrow USDT, track LTV, repay, withdraw.",
-    stack: "Next.js 15, Tailwind, Wagmi, Ethers.js, Solidity, Hardhat",
-    status: "🟡 In Progress",
+    description: "Decentralized borrowing dApp: lock WBTC, borrow USDT, track LTV ratios with smart contract integration.",
+    stack: "Next.js, Solidity, Ethers.js, Hardhat",
+    category: "Additional",
   },
   {
-    name: "Go Booking App",
-    url: "https://github.com/ghanshyam2005singh/Golang-Learning-Project",
-    description: "Ticket booking app to learn Go: covers basics to concurrency, file I/O, and testing.",
-    stack: "Go (Golang)",
-    status: "✅ Completed",
+    name: "Homie-Finder",
+    url: "https://github.com/ghanshyam2005singh/Homie-Finder",
+    description: "Smart roommate matching platform for students with preference-based algorithms and secure messaging.",
+    stack: "Next.js, Firebase, Supabase",
+    category: "Additional",
   },
   {
     name: "DataMind AI",
     url: "https://github.com/ghanshyam2005singh/DataMind-AI",
-    description: "AI-powered data management agent: organize, retrieve, process, and analyze data.",
-    stack: "AI, Cloud, Node.js",
-    status: "✅ Completed",
+    description: "AI-powered data management agent for organizing, retrieving, and analyzing large datasets efficiently.",
+    stack: "Python, AI/ML, Cloud APIs",
+    category: "Additional",
   },
   {
-    name: "URL Shortener",
-    url: "https://github.com/ghanshyam2005singh/url-shortner",
-    description: "Shorten long URLs, generate unique codes, simple Flask web UI.",
-    stack: "Flask, MongoDB",
-    status: "✅ Completed",
-  },
-  {
-    name: "Blogging-App",
-    url: "https://github.com/ghanshyam2005singh/Blogging-App",
-    description: "Create account, write blogs, comment, read. Modern blogging platform.",
-    stack: "Node.js, Express.js, MongoDB, EJS, JavaScript",
-    status: "✅ Completed",
-  },
-  {
-    name: "Discord Bot",
-    url: "https://github.com/ghanshyam2005singh/Discord-Bot",
-    description: "Custom Discord bot using Node.js.",
-    stack: "Node.js, Discord.js",
-    status: "✅ Completed",
-  },
-  {
-    name: "Currency Converter",
-    url: "https://github.com/ghanshyam2005singh/Currency-Converter-using-API",
-    description: "Currency converter using public API.",
-    stack: "JavaScript, API",
-    status: "✅ Completed",
+    name: "Zombie Survival Game",
+    url: "https://github.com/ghanshyam2005singh/Zombie-Survival-Shooter",
+    description: "Browser-based top-down shooter game with real-time scoring, health system, and leaderboards.",
+    stack: "Phaser 3, JavaScript, Firebase",
+    category: "Additional",
   },
 ];
 
-const Projects: React.FC = () => (
-  <section
-    id="projects"
-    className="w-full mx-auto py-16 px-4 flex flex-col items-center gap-8 z-10"
-  >
-    <h2
-      className="text-3xl sm:text-4xl font-extrabold mb-10 text-center font-mono tracking-tight text-[#18181b]"
-      style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
-    >
-      Additional Projects
-    </h2>
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 relative max-w-6xl mx-auto">
-      {projects.map((project) => (
-        <a
-          key={project.name}
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block transition-all relative overflow-visible rounded-xl border border-[#e5e7eb] bg-white/80 hover:bg-white/100 shadow-md hover:shadow-lg p-6"
-        >
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-mono text-[#6366f1]">{project.status}</span>
-            <h3 className="text-lg font-semibold text-[#18181b] group-hover:underline flex items-center gap-2 font-mono ml-2">
-              {project.name}
-              <ExternalLink className="w-4 h-4 opacity-60 group-hover:opacity-100 transition" />
-            </h3>
+const Projects: React.FC = () => {
+  const featuredProjects = projects.filter(p => p.category === "Featured");
+  const additionalProjects = projects.filter(p => p.category === "Additional");
+
+  return (
+    <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Projects
+          </h2>
+          <p className="text-lg text-gray-600">
+            Building solutions that make a difference
+          </p>
+        </div>
+
+        {/* Featured Projects */}
+        <div className="mb-16">
+          <h3 className="text-xl font-semibold text-gray-900 mb-8">Featured Projects</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredProjects.map((project) => (
+              <div
+                key={project.name}
+                className="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-lg font-semibold text-gray-900">
+                    {project.name}
+                  </h4>
+                  <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+                    Featured
+                  </span>
+                </div>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="mb-4">
+                  <p className="text-sm text-gray-500 mb-2">Tech Stack:</p>
+                  <p className="text-sm text-gray-700">{project.stack}</p>
+                </div>
+                <div className="flex gap-3">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      -View Project
+                    </a>
+                  )}
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-blue-600 font-medium"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
-          <p className="text-[#312e81] mb-2 font-mono">{project.description}</p>
-          <div className="text-xs text-[#6366f1] font-mono">{project.stack}</div>
-        </a>
-      ))}
-    </div>
-  </section>
-);
+        </div>
+
+        {/* Additional Projects */}
+        <div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-8">Additional Projects</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {additionalProjects.map((project) => (
+              <div
+                key={project.name}
+                className="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow"
+              >
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  {project.name}
+                </h4>
+                <p className="text-gray-600 mb-3 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="mb-3">
+                  <p className="text-sm text-gray-700">{project.stack}</p>
+                </div>
+                <div className="flex gap-3">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      View Project
+                    </a>
+                  )}
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Projects;

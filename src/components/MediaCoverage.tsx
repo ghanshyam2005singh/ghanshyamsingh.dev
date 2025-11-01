@@ -34,9 +34,13 @@ const MediaCoverage: React.FC = () => {
     setSelectedImage(null);
   };
 
+  const handleModalClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
     <>
-      <section id="media-coverage" className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50 relative z-10">
+      <section id="media-coverage" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
@@ -49,11 +53,11 @@ const MediaCoverage: React.FC = () => {
           </div>
 
           {/* News Links */}
-          <div className="mb-12 relative z-20">
+          <div className="mb-12">
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Online Articles</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {newsLinks.map((link, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 relative z-30">
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
                   <h4 className="text-lg font-medium text-gray-900 mb-2">
                     {link.title}
                   </h4>
@@ -62,7 +66,7 @@ const MediaCoverage: React.FC = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-medium relative z-40"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
                   >
                     Read Article →
                   </a>
@@ -72,13 +76,13 @@ const MediaCoverage: React.FC = () => {
           </div>
 
           {/* Media Photos */}
-          <div className="relative z-20">
+          <div>
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Press Coverage</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {mediaPhotos.map((photo, index) => (
                 <div 
                   key={index} 
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow relative z-30"
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
                   onClick={() => openImageModal(photo)}
                 >
                   <Image
@@ -101,7 +105,7 @@ const MediaCoverage: React.FC = () => {
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
           onClick={closeImageModal}
         >
-          <div className="relative max-w-4xl max-h-full">
+          <div className="relative max-w-4xl max-h-full" onClick={handleModalClick}>
             <Image
               src={selectedImage}
               alt="Full size media coverage"

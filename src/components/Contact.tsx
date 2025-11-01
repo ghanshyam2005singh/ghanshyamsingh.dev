@@ -3,64 +3,72 @@ import React from "react";
 const Contact: React.FC = () => (
   <section
     id="contact"
-    className="w-full mx-auto py-16 px-4 flex flex-col items-center gap-8"
+    className="py-16 px-4 sm:px-6 lg:px-8 bg-white"
   >
-    <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 text-center font-mono tracking-tight text-[#18181b]" style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}>
-      Contact
-    </h2>
-    <p className="text-base sm:text-lg text-[#18181b] font-mono text-center mb-4">
-      <span className="inline-block animate-wiggle">💬</span> Let’s build something amazing together! Reach out via any platform below:
-    </p>
-    <div className="flex flex-wrap justify-center gap-3 w-full">
-      <a
-        href="https://iron-industry.tech/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
-        style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
-      >
-        Startup
-      </a>
-      <a
-        href="https://www.linkedin.com/in/ghanshyam-singh-b014232b2/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
-        style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
-      >
-        LinkedIn
-      </a>
-      <a
-        href="https://discord.gg/FFEZqzGwtG"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
-        style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
-      >
-        Discord
-      </a>
-      <a
-        href="https://github.com/ghanshyam2005singh"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
-        style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
-      >
-        GitHub
-      </a>
-      <a
-        href="https://twitter.com/https_ghanshyam"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-5 py-2 z-10 font-semibold text-[#6366f1] hover:underline font-mono transition"
-        style={{ fontFamily: "'JetBrains Mono', 'Fira Mono', monospace" }}
-      >
-        Twitter
-      </a>
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        Get In Touch
+      </h2>
+      <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Let&apos;s build something amazing together! I&apos;m always open to discussing new opportunities, 
+        collaborations, or just having a chat about technology.
+      </p>
+      
+      {/* Contact Links */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+        <a
+          href="https://alumconn.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-3 bg-gray-50 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors font-medium border border-gray-200"
+        >
+          Alumconn
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ghanshyam-singh-b014232b2/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-3 bg-gray-50 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors font-medium border border-gray-200"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/ghanshyam2005singh"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-3 bg-gray-50 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors font-medium border border-gray-200"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://twitter.com/https_ghanshyam"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-3 bg-gray-50 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors font-medium border border-gray-200"
+        >
+          Twitter
+        </a>
+        <a
+          href="https://discord.gg/FFEZqzGwtG"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-3 bg-gray-50 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors font-medium border border-gray-200"
+        >
+          Discord
+        </a>
+      </div>
+
+      {/* Email */}
+      <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+        <p className="text-gray-600 mb-2">Prefer email?</p>
+        <a 
+          href="mailto:ghanshyam2005singh@gmail.com"
+          className="text-blue-600 hover:text-blue-700 font-medium text-lg"
+        >
+          ghanshyam2005singh@gmail.com
+        </a>
+      </div>
     </div>
-    <p className="text-xs z-10 text-[#6366f1] mt-4 font-mono text-center">
-      Email: <span className="underline">ghanshyam2005singh@gmail.com</span>
-    </p>
   </section>
 );
 

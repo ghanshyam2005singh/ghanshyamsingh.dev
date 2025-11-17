@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram  } from "lucide-react";
 
 const Header: React.FC = () => (
   <header className="w-full py-5 bg-transparent">
@@ -8,6 +8,15 @@ const Header: React.FC = () => (
         Portfolio
       </span>
       <nav className="flex gap-5">
+        <a
+          href="https://instagram.com/https_ghanshyam"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          className="text-[#6366f1] hover:text-[#1da1f2] transition z-10"
+        >
+          <Instagram className="w-6 h-6" />
+        </a>
         <a
           href="https://twitter.com/https_ghanshyam"
           target="_blank"

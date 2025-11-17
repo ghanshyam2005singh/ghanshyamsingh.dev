@@ -49,12 +49,12 @@ const Contact: React.FC = () => (
           Twitter
         </a>
         <a
-          href="https://discord.gg/FFEZqzGwtG"
+          href="https://instagram.com/https_ghanshyam"
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-3 bg-gray-50 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors font-medium border border-gray-200"
         >
-          Discord
+          Instagram
         </a>
       </div>
 

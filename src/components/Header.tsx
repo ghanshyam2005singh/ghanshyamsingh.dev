@@ -9,7 +9,7 @@ const Header: React.FC = () => (
       </span>
       <nav className="flex gap-5">
         <a
-          href="https://instagram.com/http_ghanshyam"
+          href="https://instagram.com/https_ghanshyam"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"

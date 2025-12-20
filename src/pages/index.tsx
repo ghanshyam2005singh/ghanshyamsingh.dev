@@ -11,6 +11,7 @@ import MediaCoverage from "../components/MediaCoverage";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import ScrollNav from '../components/ScrollNav';
 
 const Home: React.FC = () => {
   return (
@@ -41,6 +42,7 @@ const Home: React.FC = () => {
         />
         <Header />
         <main id="main-content" className="relative z-10 animate-fadein">
+          <ScrollNav />
           <About />
           <Skills />
           <WorkExperience />

@@ -92,7 +92,7 @@ const Skills: React.FC = () => (
       {/* Call to Action Links */}
       <div className="flex flex-wrap justify-center gap-4">
         <a
-          href="https://leetcode.com/ghanshyam_064/"
+          href="hhttps://leetcode.com/u/https_ghanshyam/"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"

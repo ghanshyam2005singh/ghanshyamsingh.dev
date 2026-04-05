@@ -2,6 +2,13 @@ import React from "react";
 
 const workExperience = [
   {
+    role: "LFX Mentee",
+    org: "Linux Foundation",
+    period: "March 2026 - May 2026",
+    desc: "Selected for LFX mentorship, contributing to open source projects in cloud native ecosystem. Gained hands-on experience with Kubernetes, CNCF tools, and collaborated with global developers.",
+    location: "Remote"
+  },
+  {
     role: "Kubestellar Intern",
     org: "CNCF (Cloud Native Computing Foundation)",
     period: "Sept 2025 – Nov 2025",

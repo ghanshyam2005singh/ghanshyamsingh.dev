@@ -2,6 +2,13 @@ import React from "react";
 
 const workExperience = [
   {
+    role: "GSoC",
+    org: "Google Summer of Code",
+    period: "May 2026 - August 2026",
+    desc: "Building a encypted education platform",
+    location: "Remote"
+  },
+  {
     role: "LFX Mentee",
     org: "Linux Foundation",
     period: "March 2026 - May 2026",

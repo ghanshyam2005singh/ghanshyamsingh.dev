@@ -134,6 +134,12 @@ const About: React.FC = () => {
               >
                 Get In Touch
               </Link>
+              <Link
+                href="/https://linktr.ee/https_ghanshyam"
+                className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+              >
+                Linktree
+              </Link>
               </div>
               <div className="flex flex-wrap gap-4">
               <a

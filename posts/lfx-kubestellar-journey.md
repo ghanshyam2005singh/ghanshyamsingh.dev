@@ -267,18 +267,6 @@ And honestly, that is one of the most beautiful things about open source.
 
 Knowledge gets shared. People help each other. Everyone grows together.
 
-## Thank You to My Mentors
-
-This journey would not have been the same without the people who reviewed my work, answered questions, gave direction, and trusted me with responsibility.
-
-A huge thank you to **Andy Anderson** and **Rishi Mondal** for their mentorship, patience, technical guidance, and constant support throughout the journey.
-
-They helped me understand not only the project, but also how to think like an open-source contributor: communicate clearly, document decisions, respect maintainers' time, and keep improving the work until it becomes genuinely useful.
-
-I am also grateful to the KubeStellar community, the Linux Foundation LFX Mentorship program, CNCF, and every contributor who made the community feel welcoming.
-
-> The best mentorship does not just help you finish a task. It changes how you approach the next hard problem.
-
 ## Final Thoughts
 
 When people ask me what I gained from open source, my answer is simple.

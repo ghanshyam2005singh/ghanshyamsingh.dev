@@ -98,6 +98,12 @@ By the time it ended, I was not just contributing.
 
 I had become part of the community.
 
+If you want to explore the project that pulled me deeper into the ecosystem, start here:
+
+- [KubeStellar GitHub organization](https://github.com/kubestellar)
+- [KubeStellar A2A GitHub repository](https://github.com/kubestellar/a2a)
+- [KubeStellar A2A quick start documentation](https://docs.kubestellar.io/docs/a2a/getting-started/quick-start)
+
 ![KubeStellar internship placeholder](/blog/kubestellar-internship.png)
 
 ## Falling in Love With Open Source
@@ -156,6 +162,39 @@ A large part of my work involved using KIND clusters to simulate real-world scen
 
 Every day felt like a new learning opportunity.
 
+## What I Worked on Technically
+
+The technical part of the mentorship was where things became intense in the best way.
+
+KubeStellar A2A sits at an interesting intersection: Kubernetes operations, multi-cluster workflows, automation, and AI-assisted interfaces. My work was not limited to writing code in isolation. It involved understanding how user intent could become a reliable operational action inside a Kubernetes environment.
+
+Some of the areas I spent time on:
+
+- Testing AI Missions and validating whether generated workflows behaved correctly.
+- Reproducing bugs using local KIND clusters and different kubeconfig contexts.
+- Checking cluster discovery, namespace listing, resource lookup, and multi-cluster behavior.
+- Reviewing CLI behavior and making sure commands were understandable for new users.
+- Improving documentation so contributors could set up, test, and debug faster.
+- Validating edge cases around failed clusters, missing context, invalid input, and partial workflow failures.
+
+The work forced me to think less like someone trying to make a demo pass and more like someone responsible for a real user journey.
+
+```txt
+Local testing loop:
+1. Create or reset KIND clusters
+2. Configure kubeconfig contexts
+3. Run the A2A workflow or CLI command
+4. Reproduce the issue with clear steps
+5. Capture logs, screenshots, and expected behavior
+6. Report or validate the fix
+```
+
+That loop became a habit.
+
+It also taught me that good engineering is not only about building features. It is also about making failures understandable.
+
+> A bug report is not just "this is broken." A good bug report is a map that helps someone else reach the same problem and fix it with confidence.
+
 ## Sleepless Nights, Bugs, and Ownership
 
 One lesson that LFX taught me was ownership.
@@ -190,6 +229,26 @@ Through that process, I learned how important quality assurance, testing, and at
 
 ![GitHub contribution graph placeholder](/blog/github-contribution-graph.png)
 
+## Lessons From A2A and Multi-Cluster Testing
+
+The A2A project helped me understand why multi-cluster Kubernetes tooling is difficult.
+
+In a single-cluster setup, you already have many moving parts: workloads, namespaces, services, RBAC, kubeconfig, logs, events, controllers, and user permissions.
+
+In a multi-cluster setup, that complexity multiplies.
+
+Now the system has to answer harder questions:
+
+- Which cluster should this action target?
+- What happens if one cluster is reachable and another is not?
+- How do we expose useful errors without overwhelming the user?
+- Can an AI-assisted workflow explain what it is about to do?
+- Can the same workflow be tested safely before applying changes?
+
+These questions made me appreciate the value of dry runs, clear command output, reproducible test cases, and careful documentation.
+
+They also made me respect the people building infrastructure tools even more. The best tools feel simple because someone has already absorbed a lot of complexity for the user.
+
 ## From Being Mentored to Mentoring Others
 
 Perhaps the most rewarding part of the entire journey was realizing how much I had grown.
@@ -207,6 +266,18 @@ The same community that helped me learn had given me the opportunity to help oth
 And honestly, that is one of the most beautiful things about open source.
 
 Knowledge gets shared. People help each other. Everyone grows together.
+
+## Thank You to My Mentors
+
+This journey would not have been the same without the people who reviewed my work, answered questions, gave direction, and trusted me with responsibility.
+
+A huge thank you to **Andy Anderson** and **Rishi Mondal** for their mentorship, patience, technical guidance, and constant support throughout the journey.
+
+They helped me understand not only the project, but also how to think like an open-source contributor: communicate clearly, document decisions, respect maintainers' time, and keep improving the work until it becomes genuinely useful.
+
+I am also grateful to the KubeStellar community, the Linux Foundation LFX Mentorship program, CNCF, and every contributor who made the community feel welcoming.
+
+> The best mentorship does not just help you finish a task. It changes how you approach the next hard problem.
 
 ## Final Thoughts
 

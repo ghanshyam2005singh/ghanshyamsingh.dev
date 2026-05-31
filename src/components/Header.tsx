@@ -2,22 +2,29 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
+  BookOpen,
+  BriefcaseBusiness,
+  FolderKanban,
   Github,
+  Home,
   Linkedin,
-  Twitter,
   Instagram,
+  Mail,
   Menu,
+  Newspaper,
+  Twitter,
+  User,
   X,
 } from "lucide-react";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/experience", label: "Experience" },
-  { href: "/news", label: "News" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home", Icon: Home },
+  { href: "/about", label: "About", Icon: User },
+  { href: "/projects", label: "Projects", Icon: FolderKanban },
+  { href: "/experience", label: "Experience", Icon: BriefcaseBusiness },
+  { href: "/news", label: "News", Icon: Newspaper },
+  { href: "/blog", label: "Blog", Icon: BookOpen },
+  { href: "/contact", label: "Contact", Icon: Mail },
 ];
 
 const socialLinks = [
@@ -122,6 +129,26 @@ const Header: React.FC = () => {
           </nav>
         </div>
       )}
+
+      <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white/95 px-2 py-2 shadow-[0_-8px_24px_rgba(15,23,42,0.08)] backdrop-blur-xl lg:hidden">
+        <div className="flex items-center gap-1 overflow-x-auto">
+          {navItems.map(({ href, label, Icon }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setMenuOpen(false)}
+              className={`flex min-w-[72px] flex-1 flex-col items-center justify-center gap-1 rounded-lg px-2 py-2 text-[11px] font-semibold transition-colors ${
+                isActive(href)
+                  ? "bg-blue-600 text-white"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+              }`}
+            >
+              <Icon className="h-5 w-5" />
+              <span>{label}</span>
+            </Link>
+          ))}
+        </div>
+      </nav>
     </header>
   );
 };

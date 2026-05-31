@@ -134,12 +134,14 @@ const About: React.FC = () => {
               >
                 Get In Touch
               </Link>
-              <Link
-                href="/https://linktr.ee/https_ghanshyam"
+              <a
+                href="https://linktr.ee/https_ghanshyam"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
                 Linktree
-              </Link>
+              </a>
               </div>
               <div className="flex flex-wrap gap-4">
               <a

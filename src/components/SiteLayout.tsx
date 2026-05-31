@@ -24,7 +24,7 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) => {
         }}
       />
       <Header />
-      <main id="main-content" className="relative z-10 animate-fadein">
+      <main id="main-content" className="relative z-10 animate-fadein pb-20 lg:pb-0">
         {children}
       </main>
       <Footer />

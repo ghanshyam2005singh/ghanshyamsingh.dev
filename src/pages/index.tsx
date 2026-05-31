@@ -1,6 +1,5 @@
 import React from "react";
 import About from "../components/About";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -12,6 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import SiteLayout from "../components/SiteLayout";
+import SEO, { alumconnJsonLd, personJsonLd, websiteJsonLd } from "../components/SEO";
 import { BlogPostMeta, getAllPosts } from "../../lib/blog";
 
 type HomeProps = {
@@ -56,14 +56,18 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
 
   return (
     <>
-      <Head>
-        <title>Ghanshyam Singh - Portfolio</title>
-        <meta
-          name="description"
-          content="Welcome to my portfolio website. Explore my projects, skills, journey, achievements, and contact information."
-        />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      </Head>
+      <SEO
+        title="Ghanshyam Singh - Alumconn Founder & Full Stack Developer"
+        description="Official portfolio of Ghanshyam Singh, founder of Alumconn, full stack developer, open-source contributor, and KubeStellar LFX mentee building products for students and developers."
+        path="/"
+        keywords={[
+          "Ghanshyam Singh",
+          "Ghanshyam Singh Alumconn",
+          "Alumconn founder",
+          "Ghanshyam Singh official website",
+        ]}
+        structuredData={[personJsonLd, websiteJsonLd, alumconnJsonLd]}
+      />
       <SiteLayout>
         <About />
 

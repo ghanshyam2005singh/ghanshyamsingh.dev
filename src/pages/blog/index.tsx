@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,6 +12,7 @@ import {
 } from "lucide-react";
 import SiteLayout from "../../components/SiteLayout";
 import BlogSubscribe from "../../components/BlogSubscribe";
+import SEO, { personJsonLd, websiteJsonLd } from "../../components/SEO";
 import { BlogPostMeta, getAllPosts } from "../../../lib/blog";
 
 type BlogPageProps = {
@@ -70,13 +70,30 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
 
   return (
     <>
-      <Head>
-        <title>Blog - Ghanshyam Singh</title>
-        <meta
-          name="description"
-          content="Read Ghanshyam Singh's essays and notes on engineering, open source, projects, and learning."
-        />
-      </Head>
+      <SEO
+        title="Blog - Ghanshyam Singh on Alumconn, Open Source & Engineering"
+        description="Read Ghanshyam Singh's blog about Alumconn, open source, KubeStellar, LFX, engineering, projects, and lessons from building products in public."
+        path="/blog"
+        keywords={[
+          "Ghanshyam Singh blog",
+          "Ghanshyam Singh Alumconn blog",
+          "Alumconn blog",
+          "KubeStellar LFX blog",
+        ]}
+        structuredData={[
+          personJsonLd,
+          websiteJsonLd,
+          {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: "Ghanshyam Singh Blog",
+            url: "https://ghanshyam-singh.me/blog",
+            author: {
+              "@id": "https://ghanshyam-singh.me/#person",
+            },
+          },
+        ]}
+      />
       <SiteLayout>
         <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-6xl mx-auto">

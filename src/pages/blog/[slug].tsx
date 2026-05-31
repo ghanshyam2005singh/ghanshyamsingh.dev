@@ -1,23 +1,56 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ArrowLeft, CalendarDays, Clock } from "lucide-react";
 import SiteLayout from "../../components/SiteLayout";
 import BlogSubscribe from "../../components/BlogSubscribe";
+import SEO, { absoluteUrl, personJsonLd } from "../../components/SEO";
 import { BlogPost, getPostBySlug, getPostSlugs } from "../../../lib/blog";
 
 type BlogPostPageProps = {
   post: BlogPost;
 };
 
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => (
-  <>
-    <Head>
-      <title>{post.title} - Ghanshyam Singh</title>
-      <meta name="description" content={post.excerpt} />
-    </Head>
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
+  const articleUrl = `/blog/${post.slug}`;
+
+  return (
+    <>
+    <SEO
+      title={`${post.title} - Ghanshyam Singh Blog`}
+      description={post.excerpt}
+      path={articleUrl}
+      image={post.coverImage}
+      type="article"
+      publishedTime={post.date}
+      keywords={[
+        post.title,
+        ...post.tags,
+        "Ghanshyam Singh blog",
+        "Ghanshyam Singh Alumconn",
+      ]}
+      structuredData={[
+        personJsonLd,
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.excerpt,
+          image: absoluteUrl(post.coverImage),
+          datePublished: post.date,
+          dateModified: post.date,
+          mainEntityOfPage: absoluteUrl(articleUrl),
+          author: {
+            "@id": "https://ghanshyam-singh.me/#person",
+          },
+          publisher: {
+            "@id": "https://ghanshyam-singh.me/#person",
+          },
+          keywords: post.tags.join(", "),
+        },
+      ]}
+    />
     <SiteLayout>
       <article>
         <section className="px-4 sm:px-6 lg:px-8 pt-10 pb-8">
@@ -91,7 +124,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => (
       </article>
     </SiteLayout>
   </>
-);
+  );
+};
 
 export const getStaticPaths: GetStaticPaths = () => {
   const paths = getPostSlugs().map((slug) => ({

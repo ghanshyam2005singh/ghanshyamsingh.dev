@@ -1,0 +1,6 @@
+Ghanshyam Singh
+Founder of Alumconn, full stack developer, and open-source contributor.
+
+Primary site: https://ghanshyam-singh.me
+Deployment: https://ghanshyamsingh-dev.vercel.app
+Alumconn: https://alumconn.in

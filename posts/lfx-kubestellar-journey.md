@@ -2,7 +2,7 @@
 title: "From Beginner Contributor to KubeStellar LFX Mentee"
 excerpt: "A personal journey through CNCF, KubeStellar, community meetings, bug reports, mentoring, and the confidence that comes from showing up consistently."
 date: "2026-05-31"
-coverImage: "/blog/kubestellar.png"
+coverImage: "/blog/Lfx-wedp"
 tags: "LFX, KubeStellar, CNCF, Open Source"
 ---
 

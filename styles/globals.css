@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
+  color: #18181b;
 }
 h1, h2, h3, h4, h5, h6, code, pre {
   font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
@@ -39,4 +40,92 @@ h1, h2, h3, h4, h5, h6, code, pre {
     border-radius: 1rem;
     padding: 1.25rem;
   }
+}
+
+.blog-content {
+  color: #27272a;
+  font-size: 1.075rem;
+  line-height: 1.85;
+}
+
+.blog-content h2,
+.blog-content h3 {
+  color: #111827;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content h2 {
+  font-size: 1.875rem;
+}
+
+.blog-content h3 {
+  font-size: 1.35rem;
+}
+
+.blog-content p,
+.blog-content ul,
+.blog-content ol,
+.blog-content blockquote,
+.blog-content pre {
+  margin-bottom: 1.5rem;
+}
+
+.blog-content a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #2563eb;
+  background: #eff6ff;
+  border-radius: 0 8px 8px 0;
+  color: #1e3a8a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+}
+
+.blog-content ul,
+.blog-content ol {
+  padding-left: 1.5rem;
+}
+
+.blog-content ul {
+  list-style: disc;
+}
+
+.blog-content ol {
+  list-style: decimal;
+}
+
+.blog-content code {
+  background: #e5e7eb;
+  border-radius: 6px;
+  color: #111827;
+  font-size: 0.9em;
+  padding: 0.15rem 0.35rem;
+}
+
+.blog-content pre {
+  background: #111827;
+  border-radius: 8px;
+  color: #e5e7eb;
+  overflow-x: auto;
+  padding: 1.25rem;
+}
+
+.blog-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.blog-content img {
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin: 2rem auto;
 }

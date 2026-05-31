@@ -1,13 +1,5 @@
 import React from "react";
 
-const blogs = [
-  {
-    title: "My Journey to GSoC 2026",
-    desc: "A personal account of my experience applying and being selected for Google Summer of Code 2026, including tips and lessons learned.",
-    link: "http://localhost:3000/",
-  }
-]
-
 const achievements = [
   {
     title: "Google Cloud Arcade Facilitator 2025",
@@ -75,36 +67,6 @@ const Achievements: React.FC = () => (
               <span className="text-sm text-blue-600 font-medium whitespace-nowrap">
                 {item.year}
               </span>
-            </div>
-          </div>
-        ))}
-      </div>
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Stories & Blogs
-        </h2>
-        <p className="text-lg text-gray-600">
-          How i came this far!
-        </p>
-      </div>
-      
-      {/* Blogs */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {blogs.map((item, idx) => (
-          <div key={idx} className="bg-white rounded-lg p-6 border border-gray-200">
-            <div className="flex justify-between items-start gap-4">
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              <span className="text-bold text-blue-600 font-medium whitespace-nowrap">
-                {item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer">Read More</a> : null}
-              </span>
-              </div>
             </div>
           </div>
         ))}

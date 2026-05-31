@@ -22,7 +22,7 @@ I was just curious.
 
 ## Discovering CNCF and KubeStellar
 
-Around that time, I started exploring projects within the CNCF ecosystem. I wanted to understand how real-world open-source projects worked and how contributors collaborated across the world.
+Around June 2025, I started exploring projects within the CNCF ecosystem. I wanted to understand how real-world open-source projects worked and how contributors collaborated across the world.
 
 While exploring different projects, I came across KubeStellar.
 
@@ -33,6 +33,8 @@ The problem was that learning and contributing were two completely different thi
 I quickly realized that I could not simply read documentation and magically become a contributor. I needed to set up my environment, understand the project architecture, learn Kubernetes concepts, and actually start participating.
 
 Even my laptop had other plans.
+
+![Laptop placeholder](/blog/laptop.jpeg)
 
 Running local Kubernetes environments was not exactly easy on my machine. I spent time upgrading and fixing my setup before I could comfortably run local clusters. After several rounds of troubleshooting, configuring tools, and experimenting with KIND clusters, I finally had an environment where I could start learning by doing.
 
@@ -96,7 +98,7 @@ By the time it ended, I was not just contributing.
 
 I had become part of the community.
 
-![GitHub contribution graph placeholder](/blog/github-contribution-graph.png)
+![KubeStellar internship placeholder](/blog/kubestellar-internship.png)
 
 ## Falling in Love With Open Source
 
@@ -186,7 +188,7 @@ It was about helping improve the project and making it better for future users a
 
 Through that process, I learned how important quality assurance, testing, and attention to detail are in large-scale open-source projects.
 
-![Bug reports and testing placeholder](/blog/kubestellar-internship.png)
+![GitHub contribution graph placeholder](/blog/github-contribution-graph.png)
 
 ## From Being Mentored to Mentoring Others
 

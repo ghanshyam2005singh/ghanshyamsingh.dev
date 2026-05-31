@@ -65,13 +65,13 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => (
         </section>
 
         <section className="px-4 sm:px-6 lg:px-8 pb-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-gray-200 bg-gray-100 shadow-sm">
+          <div className="max-w-3xl mx-auto">
+            <div className="relative h-30 sm:h-64 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
               <Image
                 src={post.coverImage}
                 alt={post.title}
                 fill
-                className="object-cover"
+                className="object-contain p-5 sm:p-6"
                 priority
               />
             </div>

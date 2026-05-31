@@ -88,12 +88,12 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
                   href={`/blog/${featuredPost.slug}`}
                   className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
                 >
-                  <div className="relative h-72">
+                  <div className="relative h-72 bg-white">
                     <Image
                       src={featuredPost.coverImage}
                       alt={featuredPost.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute left-4 top-4 rounded-lg bg-white/90 px-3 py-2 text-sm font-semibold text-blue-600 backdrop-blur">
                       Latest blog

@@ -2,7 +2,7 @@
 title: "From Beginner Contributor to KubeStellar LFX Mentee"
 excerpt: "A personal journey through CNCF, KubeStellar, community meetings, bug reports, mentoring, and the confidence that comes from showing up consistently."
 date: "2026-05-31"
-coverImage: "/blog/Lfx-webp"
+coverImage: "/blog/lfx.png"
 tags: "LFX, KubeStellar, CNCF, Open Source"
 ---
 
@@ -18,7 +18,7 @@ I was just curious.
 
 > That curiosity ended up changing my life.
 
-![CNCF and KubeStellar banner placeholder](/blog/kubestellar.png)
+![CNCF banner placeholder](/blog/cncf.png)
 
 ## Discovering CNCF and KubeStellar
 
@@ -69,6 +69,8 @@ Those small moments might sound insignificant, but they completely changed my co
 Today, when I look back, I realize that learning how to communicate in a community was just as valuable as learning Kubernetes itself.
 
 ## Becoming an Unpaid Mentee
+
+![KubeStellar banner placeholder](/blog/kubestellar.png)
 
 My first major opportunity came through KubeStellar's unpaid mentorship program.
 

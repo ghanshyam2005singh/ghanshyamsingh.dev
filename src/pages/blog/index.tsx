@@ -110,12 +110,12 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
                   href={`/blog/${featuredPost.slug}`}
                   className="group grid grid-cols-1 lg:grid-cols-[1.12fr_0.88fr] overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
                 >
-                  <div className="relative min-h-80">
+                  <div className="relative min-h-80 bg-white">
                     <Image
                       src={featuredPost.coverImage}
                       alt={featuredPost.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
                       priority
                     />
                   </div>
@@ -179,12 +179,12 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
                           href={`/blog/${post.slug}`}
                           className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
                         >
-                          <div className="relative h-56">
+                          <div className="relative h-56 bg-white">
                             <Image
                               src={post.coverImage}
                               alt={post.title}
                               fill
-                              className="object-cover transition-transform duration-500 group-hover:scale-105"
+                              className="object-contain p-5 transition-transform duration-500 group-hover:scale-105"
                             />
                           </div>
                           <div className="p-6">

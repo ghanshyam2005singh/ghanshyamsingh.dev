@@ -62,11 +62,16 @@ const WorkExperience: React.FC = () => (
       <div className="space-y-6">
         {workExperience.map((item, idx) => (
           <div key={idx} className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">
-                  {item.role}
-                </h3>
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {item.role}
+                  </h3>
+                  <span className="inline-block px-3 py-0.5 bg-blue-100 text-blue-800 text-xs font-medium rounded-full sm:hidden">
+                    {item.period}
+                  </span>
+                </div>
                 <p className="text-blue-600 font-medium mb-2">
                   {item.org} • {item.location}
                 </p>
@@ -74,7 +79,7 @@ const WorkExperience: React.FC = () => (
                   {item.desc}
                 </p>
               </div>
-              <div className="text-right">
+              <div className="hidden sm:block shrink-0">
                 <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
                   {item.period}
                 </span>

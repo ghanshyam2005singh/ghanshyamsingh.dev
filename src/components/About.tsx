@@ -115,59 +115,51 @@ const About: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900">{github?.organisations || 6}</div>
-                <div className="text-sm text-gray-600">organisations</div>
+                <div className="text-sm text-gray-600">Organizations</div>
               </div>
             </div>
 
             {/* Call to Action */}
-            <div className="flex flex-wrap gap-4 pt-6">
-              <div className="flex flex-wrap gap-4 pt-6">
-              <Link
-                href="/projects"
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-              >
-                View My Work
-              </Link>
-              <Link
-                href="/contact"
-                className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-              >
-                Get In Touch
-              </Link>
+            <div className="flex flex-col gap-3 pt-4">
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/projects"
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                >
+                  View My Work
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                >
+                  Get In Touch
+                </Link>
               </div>
-              <div className="flex flex-wrap gap-4">
-              <a
-                href="https://leetcode.com/u/https_ghanshyam/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-              >
-                LeetCode
-              </a>
-              <a
-                href="https://linktr.ee/https_ghanshyam"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-              >
-                Linktree
-              </a>
-              {/* <a
-                href="https://drive.google.com/file/d/1KV2Mxz8nbwsALgMxQ3CcFJtbMa3JGUl3/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-              >
-                Resume
-              </a> */}
-              <a
-                href="https://github.com/ghanshyam2005singh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-              >
-                GitHub
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://leetcode.com/u/https_ghanshyam/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+                >
+                  LeetCode
+                </a>
+                <a
+                  href="https://linktr.ee/https_ghanshyam"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+                >
+                  Linktree
+                </a>
+                <a
+                  href="https://github.com/ghanshyam2005singh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+                >
+                  GitHub
+                </a>
               </div>
             </div>
           </div>

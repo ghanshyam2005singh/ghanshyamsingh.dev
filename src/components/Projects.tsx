@@ -114,7 +114,7 @@ const Projects: React.FC = () => {
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:text-blue-800 font-medium"
                     >
-                      -View Project
+                      View Project
                     </a>
                   )}
                   <a

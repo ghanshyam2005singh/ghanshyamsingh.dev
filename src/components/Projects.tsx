@@ -27,9 +27,9 @@ const projects: Project[] = [
     category: "Featured",
   },
   {
-    name: "Padh-le-Bhai",
-    url: "https://github.com/ghanshyam2005singh/padh-le-bhai",
-    liveUrl: "https://padh-le-bhai-one.vercel.app/",
+    name: "ScholarSync",
+    url: "https://github.com/ghanshyam2005singh/ScholarSync",
+    liveUrl: "https://scholarsync-two.vercel.app/",
     description: "Educational platform for students with study materials, practice tests, and interactive learning modules.",
     stack: "Next.js, Firebase, Tailwind CSS",
     category: "Featured",

@@ -7,14 +7,14 @@ const ProjectsPage: React.FC = () => (
   <>
     <SEO
       title="Projects by Ghanshyam Singh - Alumconn, CV Slayer & Open Source"
-      description="Explore Ghanshyam Singh's projects including Alumconn, CV Slayer, Padh-le-Bhai, cloud-native work, open-source contributions, and full stack product builds."
+      description="Explore Ghanshyam Singh's projects including Alumconn, CV Slayer, ScholarSync, cloud-native work, open-source contributions, and full stack product builds."
       path="/projects"
       keywords={[
         "Ghanshyam Singh projects",
         "Alumconn",
         "Alumconn Ghanshyam Singh",
         "CV Slayer",
-        "Padh-le-Bhai",
+        "ScholarSync",
       ]}
       structuredData={alumconnJsonLd}
     />

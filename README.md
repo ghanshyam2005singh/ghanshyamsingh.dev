@@ -8,26 +8,6 @@ Welcome to my personal portfolio! I’m Ghanshyam Singh, a passionate full-stack
 
 ---
 
-## 🚀 Featured Projects
-
-| Project | Description | Tech Stack | Status |
-|---------|-------------|------------|--------|
-| **[AlumConnect](https://alumconn.in)** | Secure alumni-student networking platform | Next.js, TypeScript, Prisma, PostgreSQL | 🟢 Live |
-| **[Padh-le-Bhai](https://padh-le-bhai-one.vercel.app/)** | Student notes & assignment sharing platform | Next.js, Firebase | 🟢 Live |
-| **[Dr. Serena Blake](https://dr-serena-blake-phi.vercel.app/)** | Therapist website with accessibility focus | Next.js, TypeScript | 🟢 Live |
-| **[CV-Slayer](https://github.com/ghanshyam2005singh/CV-Slayer)** | AI-powered resume reviewer | React, Node.js, Gemini API | 🟡 In Progress |
-| **[Homie-Finder](https://github.com/ghanshyam2005singh/Homie-Finder)** | Smart roommate matching for students | Next.js, Firebase, Supabase | 🟣 Coming Soon |
-
----
-
-## 🧑‍💻 About Me
-
-- **Full-Stack Developer** with a love for scalable, secure, and accessible web apps
-- **Community-Driven**: Building tools for students, developers, and underrepresented groups
-- **Product Mindset**: Focused on real-world impact and user-centric solutions
-
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js, React, TypeScript, Tailwind CSS, ShadCN UI

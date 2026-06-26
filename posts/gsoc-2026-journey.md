@@ -7,7 +7,7 @@ tags: "GSoC, Open Source, Alpha One Labs, Django, Google Summer of Code"
 ---
 
 ![Alpha One Labs Logo](/blog/logo.png)
-When I joined Alpha One Labs in November, Google Summer of Code wasn't part of the plan.
+When I joined Alpha One Labs in November 2025, Google Summer of Code wasn't part of the plan.
 
 In fact, I barely had a plan.
 
@@ -27,9 +27,7 @@ Alpha One Labs wasn't the only organization I was contributing to.
 
 At any given point during those months, I was actively contributing to six different open-source organizations. Different codebases, different tech stacks, different communities. Open source had become genuinely interesting to me — not as a means to an end, but as a way of learning things I couldn't learn anywhere else.
 
-But Alpha One Labs always felt different.
-
-It came back to Daniel.
+But Alpha One Labs always felt different. Not because of the code. Not because of anything else. It was special because of one person — my maintainer, Daniel.
 
 Every time I made a mistake — and I made plenty — he didn't let it discourage me. He corrected me, explained why, and kept me moving forward. There was never a moment where I felt like my presence in the community was a burden or that I was too far behind to catch up.
 
@@ -37,7 +35,7 @@ That kind of support is rarer than people realize.
 
 It's also what kept me coming back.
 
-## Joining Without a Roadmap
+## Joining Without a Roadmap — November 2025
 
 The first time I opened the Alpha One Labs codebase, I felt completely lost.
 
@@ -101,7 +99,7 @@ Up until that point, I had been contributing with my head down, focusing on one 
 
 When a maintainer tells you they trust your judgment, it reshapes how you see yourself.
 
-## Building Something Real
+## Building Something Real — December 2025
 
 A group of us decided to build an AI project together inside Alpha One Labs.
 
@@ -143,7 +141,7 @@ I have no doubt that this made a difference.
 
 Because genuine contribution looks completely different from strategic contribution.
 
-## Becoming a Reviewer
+## Becoming a Reviewer — January 2026
 
 At some point, something quietly shifted.
 
@@ -163,7 +161,7 @@ It was given because I showed up consistently, because my contributions were tho
 
 > The moment you go from contributor to reviewer, you stop being a visitor and become part of the foundation.
 
-## The Season Everything Got Loud
+## The Season Everything Got Loud — February 2026
 
 When GSoC season officially arrived, the entire organization changed.
 
@@ -181,7 +179,7 @@ I had become someone the organization relied on — not because of a title, not 
 
 Looking back, this was probably the moment that made my eventual selection feel inevitable rather than surprising.
 
-## Exams, Deadlines, and a Proposal I Almost Didn't Write
+## Exams, Deadlines, and a Proposal I Almost Didn't Write — March 2026
 
 Here is where the story gets honest.
 

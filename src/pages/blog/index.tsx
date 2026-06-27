@@ -230,58 +230,64 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
         </section>
 
         <BlogSubscribe source="Blog index bottom CTA" />
-
-        {showSubscribe && (
-          <div className="fixed inset-0 z-[80] flex items-center justify-center bg-gray-950/55 px-4 backdrop-blur-sm">
-            <div className="relative w-full max-w-md rounded-lg border border-gray-200 bg-white p-6 shadow-2xl">
-              <button
-                type="button"
-                aria-label="Close subscribe popup"
-                onClick={closeSubscribe}
-                className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-900"
-              >
-                <X className="h-5 w-5" />
-              </button>
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
-                <Mail className="h-6 w-6" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                Get new posts by email
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-5">
-                Subscribe for a quick notification when a new blog goes live.
-              </p>
-              <form onSubmit={handleSubscribe} className="space-y-3">
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                  className="w-full rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-                  placeholder="your.email@example.com"
-                />
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="w-full rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
-                >
-                  {status === "loading" ? "Subscribing..." : "Subscribe"}
-                </button>
-              </form>
-              {status === "success" && (
-                <p className="mt-3 text-sm font-semibold text-green-600">
-                  You&apos;re on the list.
-                </p>
-              )}
-              {status === "error" && (
-                <p className="mt-3 text-sm font-semibold text-red-600">
-                  Couldn&apos;t subscribe right now. Please try again.
-                </p>
-              )}
-            </div>
-          </div>
-        )}
       </SiteLayout>
+
+      {showSubscribe && (
+        <div
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-gray-950/55 px-4 backdrop-blur-sm"
+          onClick={closeSubscribe}
+        >
+          <div
+            className="relative w-full max-w-md rounded-lg border border-gray-200 bg-white p-6 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              aria-label="Close subscribe popup"
+              onClick={closeSubscribe}
+              className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+              <Mail className="h-6 w-6" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+              Get new posts by email
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-5">
+              Subscribe for a quick notification when a new blog goes live.
+            </p>
+            <form onSubmit={handleSubscribe} className="space-y-3">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                className="w-full rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                placeholder="your.email@example.com"
+              />
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="w-full rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {status === "loading" ? "Subscribing..." : "Subscribe"}
+              </button>
+            </form>
+            {status === "success" && (
+              <p className="mt-3 text-sm font-semibold text-green-600">
+                You&apos;re on the list.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="mt-3 text-sm font-semibold text-red-600">
+                Couldn&apos;t subscribe right now. Please try again.
+              </p>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 };

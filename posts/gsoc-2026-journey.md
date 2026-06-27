@@ -207,7 +207,7 @@ And then I waited.
 
 The results were announced on April 30, 2026.
 
-I opened my inbox that morning without many expectations.
+I opened my inbox that evening.
 
 I had submitted my proposal. I had done everything I could do. Whatever happened next was genuinely out of my hands, and I had made peace with that.
 

@@ -1,5 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://ghanshyam-singh.me
+
+# Sitemaps
 Sitemap: https://ghanshyam-singh.me/sitemap.xml
-Host: ghanshyam-singh.me

@@ -62,8 +62,8 @@ const useGithubStats = (username: string) => {
         });
       } catch {
         setStats({
-          public_repos: 169,
-          organisations: 6,
+          public_repos: 202,
+          organisations: 10,
         });
       }
     };
@@ -106,15 +106,15 @@ const About: React.FC = () => {
             {/* Simple Stats */}
             <div className="flex flex-wrap gap-6 pt-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">1900+</div>
+                <div className="text-2xl font-bold text-gray-900">2300+</div>
                 <div className="text-sm text-gray-600">Contributions</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">{github?.public_repos || 169}</div>
+                <div className="text-2xl font-bold text-gray-900">{github?.public_repos || 202}</div>
                 <div className="text-sm text-gray-600">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">{github?.organisations || 6}</div>
+                <div className="text-2xl font-bold text-gray-900">{github?.organisations || 10}</div>
                 <div className="text-sm text-gray-600">Organizations</div>
               </div>
             </div>

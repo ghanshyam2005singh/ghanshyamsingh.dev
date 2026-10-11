@@ -69,7 +69,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
         structuredData={[personJsonLd, websiteJsonLd, alumconnJsonLd]}
       />
       <SiteLayout>
-        <About />
+        <About showPhoto />
 
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-6xl mx-auto">

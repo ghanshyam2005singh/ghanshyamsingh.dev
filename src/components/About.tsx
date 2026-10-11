@@ -62,7 +62,7 @@ const useGithubStats = (username: string) => {
         });
       } catch {
         setStats({
-          public_repos: 202,
+          public_repos: 204,
           organisations: 10,
         });
       }
@@ -73,17 +73,23 @@ const useGithubStats = (username: string) => {
   return stats;
 };
 
-const About: React.FC = () => {
+type AboutProps = {
+  showPhoto?: boolean;
+};
+
+const About: React.FC<AboutProps> = ({ showPhoto = false }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
   const github = useGithubStats(GITHUB_USERNAME);
 
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center z-10 px-4 sm:px-6 lg:px-8 py-20"
+      className={`flex items-center justify-center z-10 px-4 sm:px-6 lg:px-8 ${
+        showPhoto ? "min-h-screen py-20" : "py-10 sm:py-12"
+      }`}
     >
       <div className="max-w-6xl z-10 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 z-10 lg:gap-16 items-center">
+        <div className={`grid grid-cols-1 ${showPhoto ? "lg:grid-cols-2" : ""} gap-12 z-10 lg:gap-16 items-center`}>
           
           {/* Text Content */}
           <div className="space-y-6">
@@ -97,10 +103,10 @@ const About: React.FC = () => {
                 <Typewriter />
               </div>
               
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-lg">
+              {/* <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-lg">
                 I build digital solutions that make a difference. Passionate about creating 
                 tools for students and developers, exploring AI, and turning ideas into reality.
-              </p>
+              </p> */}
             </div>
 
             {/* Simple Stats */}
@@ -110,7 +116,7 @@ const About: React.FC = () => {
                 <div className="text-sm text-gray-600">Contributions</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">{github?.public_repos || 202}</div>
+                <div className="text-2xl font-bold text-gray-900">{github?.public_repos || 204}</div>
                 <div className="text-sm text-gray-600">Projects</div>
               </div>
               <div className="text-center">
@@ -145,12 +151,11 @@ const About: React.FC = () => {
                   LeetCode
                 </a>
                 <a
-                  href="https://linktr.ee/https_ghanshyam"
-                  target="_blank"
+                  href="./socials"
                   rel="noopener noreferrer"
                   className="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
                 >
-                  Linktree
+                  Socials
                 </a>
                 <a
                   href="https://github.com/ghanshyam2005singh"
@@ -164,8 +169,8 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Photo */}
-          <div className="flex justify-center lg:justify-end">
+          {/* Show the profile photo on the home page only. */}
+          {showPhoto && <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="w-80 h-80 sm:w-96 sm:h-96 relative">
                 {/* Background decoration */}
@@ -189,7 +194,7 @@ const About: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div>}
 
         </div>
       </div>

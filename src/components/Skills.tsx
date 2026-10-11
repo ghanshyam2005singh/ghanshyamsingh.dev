@@ -56,7 +56,7 @@ const skills = [
 ];
 
 const Skills: React.FC = () => (
-  <section id="skills" className="py-16 px-4 z-10 sm:px-6 lg:px-8 bg-gray-50">
+  <section id="skills" className="py-8 px-4 z-10 sm:px-6 lg:px-8 bg-gray-50">
     <div className="max-w-6xl z-10 mx-auto">
       {/* Header */}
       <div className="text-center z-10 mb-12">
@@ -90,7 +90,7 @@ const Skills: React.FC = () => (
       </div>
 
       {/* Call to Action Links */}
-      <div className="flex flex-wrap justify-center gap-4">
+      {/* <div className="flex flex-wrap justify-center gap-4">
         <a
           href="https://leetcode.com/u/https_ghanshyam/"
           target="_blank"
@@ -100,7 +100,7 @@ const Skills: React.FC = () => (
           LeetCode Profile
         </a>
         <a
-          href="https://drive.google.com/file/d/1KV2Mxz8nbwsALgMxQ3CcFJtbMa3JGUl3/view?usp=sharing"
+          href="https://drive.google.com/file/d/1BH4I7qArpUNKlC0Xv_d2LodHBh-S-vGL/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
@@ -115,7 +115,7 @@ const Skills: React.FC = () => (
         >
           Github
         </a>
-      </div>
+      </div> */}
     </div>
   </section>
 );

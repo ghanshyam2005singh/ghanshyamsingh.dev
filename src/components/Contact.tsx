@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-12 max-w-3xl">
+        {/* <div className="mb-12 max-w-3xl">
           <p className="text-blue-600 font-semibold mb-3">Contact</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Get In Touch
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
             Have a project in mind or want to collaborate? Drop me a message and
             I&apos;ll get back to you as soon as possible.
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-8 items-start">
           <aside className="rounded-lg border border-gray-200 bg-gray-50 p-6">
@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
                   ghanshyam2005singh@gmail.com
                 </span>
               </a>
-              <div className="flex items-center gap-3 rounded-lg bg-white p-3 text-gray-700 border border-gray-200">
+              {/* <div className="flex items-center gap-3 rounded-lg bg-white p-3 text-gray-700 border border-gray-200">
                 <MapPin className="h-5 w-5 shrink-0" />
                 <span className="text-sm font-medium">India / Remote</span>
               </div>
@@ -98,9 +98,7 @@ const Contact: React.FC = () => {
               >
                 <Linkedin className="h-5 w-5 shrink-0" />
                 <span className="text-sm font-medium">LinkedIn</span>
-              </a>
-            </div>
-          </aside>
+              </a> */}
 
           <form
             onSubmit={handleSubmit}
@@ -178,8 +176,11 @@ const Contact: React.FC = () => {
               </div>
             )}
           </form>
+          </div>
+          </aside>
         </div>
       </div>
+      
     </section>
   );
 };

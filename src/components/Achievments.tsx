@@ -39,7 +39,7 @@ const achievements = [
 ];
 
 const Achievements: React.FC = () => (
-  <section id="achievements" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+  <section id="achievements" className=" px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div className="max-w-6xl mx-auto">
       {/* Header */}
       <div className="text-center mb-12">

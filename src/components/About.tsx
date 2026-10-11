@@ -126,8 +126,7 @@ const About: React.FC<AboutProps> = ({ showPhoto = false }) => {
             </div>
 
             {/* Call to Action */}
-            <div className="flex flex-col gap-3 pt-4">
-              <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap items-center gap-3 pt-4">
                 <Link
                   href="/projects"
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
@@ -140,8 +139,6 @@ const About: React.FC<AboutProps> = ({ showPhoto = false }) => {
                 >
                   Get In Touch
                 </Link>
-              </div>
-              <div className="flex flex-wrap gap-3">
                 <a
                   href="https://leetcode.com/u/https_ghanshyam/"
                   target="_blank"
@@ -165,7 +162,6 @@ const About: React.FC<AboutProps> = ({ showPhoto = false }) => {
                 >
                   GitHub
                 </a>
-              </div>
             </div>
           </div>
 

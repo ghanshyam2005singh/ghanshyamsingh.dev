@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Github, Linkedin, Mail, MapPin, MessageSquare, Send } from "lucide-react";
+import { Mail, MessageSquare, Send } from "lucide-react";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -42,68 +42,24 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* <div className="mb-12 max-w-3xl">
-          <p className="text-blue-600 font-semibold mb-3">Contact</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Have a project in mind or want to collaborate? Drop me a message and
-            I&apos;ll get back to you as soon as possible.
+    <section id="contact" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <div className="mx-auto max-w-2xl">
+        <div className="mb-8 text-center">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+            <MessageSquare className="h-6 w-6" />
+          </div>
+          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">Get in touch</h1>
+          <p className="mt-3 text-gray-600">
+            I&apos;m open to product work, open-source collaboration, internships, and technical writing.
           </p>
-        </div> */}
-
-        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-8 items-start">
-          <aside className="rounded-lg border border-gray-200 bg-gray-50 p-6">
-            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
-              <MessageSquare className="h-6 w-6" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Let&apos;s build something useful.
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              I&apos;m open to product work, open-source collaboration,
-              internships, and technical writing opportunities.
-            </p>
-            <div className="space-y-4">
-              <a
-                href="mailto:ghanshyam2005singh@gmail.com"
-                className="flex items-center gap-3 rounded-lg bg-white p-3 text-gray-700 border border-gray-200 hover:text-blue-600"
-              >
-                <Mail className="h-5 w-5 shrink-0" />
-                <span className="min-w-0 break-all text-sm font-medium">
-                  ghanshyam2005singh@gmail.com
-                </span>
-              </a>
-              {/* <div className="flex items-center gap-3 rounded-lg bg-white p-3 text-gray-700 border border-gray-200">
-                <MapPin className="h-5 w-5 shrink-0" />
-                <span className="text-sm font-medium">India / Remote</span>
-              </div>
-              <a
-                href="https://github.com/ghanshyam2005singh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-lg bg-white p-3 text-gray-700 border border-gray-200 hover:text-blue-600"
-              >
-                <Github className="h-5 w-5 shrink-0" />
-                <span className="text-sm font-medium">GitHub</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/ghanshyam-singh-b014232b2/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-lg bg-white p-3 text-gray-700 border border-gray-200 hover:text-blue-600"
-              >
-                <Linkedin className="h-5 w-5 shrink-0" />
-                <span className="text-sm font-medium">LinkedIn</span>
-              </a> */}
-
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-6 rounded-lg border border-gray-200 bg-gray-50 p-6 sm:p-8"
-          >
+          <a href="mailto:ghanshyam2005singh@gmail.com" className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700">
+            <Mail className="h-4 w-4" /> ghanshyam2005singh@gmail.com
+          </a>
+        </div>
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-6 rounded-lg border border-gray-200 bg-gray-50 p-6 sm:p-8"
+        >
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                 Name
@@ -175,12 +131,8 @@ const Contact: React.FC = () => {
                 </p>
               </div>
             )}
-          </form>
-          </div>
-          </aside>
-        </div>
+        </form>
       </div>
-      
     </section>
   );
 };

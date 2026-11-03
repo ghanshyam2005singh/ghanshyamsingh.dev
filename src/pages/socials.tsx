@@ -17,11 +17,11 @@ import SEO from "../components/SEO";
 import SiteLayout from "../components/SiteLayout";
 
 const featuredLinks = [
-    {
-    label: "LinkedIn",
-    detail: "Professional updates",
-    href: "https://www.linkedin.com/in/ghanshyam-singh-b014232b2/",
-    Icon: Linkedin,
+   {
+    label: "GitHub",
+    detail: "Projects and open-source work",
+    href: "https://github.com/ghanshyam2005singh",
+    Icon: Github,
   },
   {
     label: "Instagram",
@@ -29,11 +29,11 @@ const featuredLinks = [
     href: "https://instagram.com/https_ghanshyam",
     Icon: Instagram,
   },
-  {
-    label: "GitHub",
-    detail: "Projects and open-source work",
-    href: "https://github.com/ghanshyam2005singh",
-    Icon: Github,
+   {
+    label: "LinkedIn",
+    detail: "Professional updates",
+    href: "https://www.linkedin.com/in/ghanshyam-singh-b014232b2/",
+    Icon: Linkedin,
   },
   {
     label: "LeetCode",

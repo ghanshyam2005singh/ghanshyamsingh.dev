@@ -96,7 +96,7 @@ const SocialsPage: React.FC = () => (
       <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-xl">
           <div className="rounded-3xl border border-white/80 bg-white/85 p-6 shadow-xl shadow-slate-900/5 backdrop-blur sm:p-9">
-            <div className="flex flex-col items-center text-center">
+           {/* <div className="flex flex-col items-center text-center">
               <div className="rounded-full bg-blue-500 p-1 shadow-lg shadow-indigo-500/20">
                 <Image
                   src="/assets/cmo-2.jpg"
@@ -115,7 +115,7 @@ const SocialsPage: React.FC = () => (
               </h1>
               <p className="mt-3 max-w-md text-sm leading-6 text-slate-600 sm:text-base">
                 Follow along for what I’m building, learning, and sharing.
-              </p> */}
+              </p>
             </div>
 
             <div className="mt-3 flex justify-center gap-3">
@@ -136,6 +136,7 @@ const SocialsPage: React.FC = () => (
                 </a>
               ))}
             </div>
+            */}
 
             {/* <p className="mt-4 text-center text-xs font-medium text-slate-500">
               @https_ghanshyam · Instagram &amp; X
